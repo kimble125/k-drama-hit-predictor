@@ -1,0 +1,21 @@
+{
+  "name": "김종연",
+  "primary_role": "director",
+  "award_count_5y": 0,
+  "sns_followers": null,
+  "credits": [
+    {
+      "drama_title": "괴물",
+      "year": 2014,
+      "role": "director",
+      "channel": "JTBC",
+      "day_slot": null,
+      "time_slot": "11:00",
+      "avg_rating": 5.1,
+      "first_ep_rating": null,
+      "max_rating": 6.666,
+      "is_lead": true,
+      "notes": "tmdb_id=252047, job=Director"
+    }
+  ]
+}

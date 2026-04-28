@@ -1,0 +1,86 @@
+{
+  "name": "조영민",
+  "primary_role": "director",
+  "award_count_5y": 0,
+  "sns_followers": null,
+  "credits": [
+    {
+      "drama_title": "러브 미",
+      "year": 2025,
+      "role": "director",
+      "channel": "JTBC",
+      "day_slot": null,
+      "time_slot": "08:50",
+      "avg_rating": null,
+      "first_ep_rating": null,
+      "max_rating": null,
+      "is_lead": true,
+      "notes": "tmdb_id=275989, job=Director|wiki_matched"
+    },
+    {
+      "drama_title": "은중과 상연",
+      "year": 2025,
+      "role": "director",
+      "channel": "Netflix",
+      "day_slot": null,
+      "time_slot": null,
+      "avg_rating": null,
+      "first_ep_rating": null,
+      "max_rating": null,
+      "is_lead": true,
+      "notes": "tmdb_id=224414, job=Director|wiki_matched"
+    },
+    {
+      "drama_title": "사랑의 이해",
+      "year": 2022,
+      "role": "director",
+      "channel": "JTBC",
+      "day_slot": "일목",
+      "time_slot": "10:30",
+      "avg_rating": 3.2,
+      "first_ep_rating": null,
+      "max_rating": 4.414,
+      "is_lead": true,
+      "notes": "tmdb_id=211746, job=Director|wiki_matched"
+    },
+    {
+      "drama_title": "브람스를 좋아하세요",
+      "year": 2020,
+      "role": "director",
+      "channel": "SBS",
+      "day_slot": null,
+      "time_slot": null,
+      "avg_rating": null,
+      "first_ep_rating": null,
+      "max_rating": null,
+      "is_lead": true,
+      "notes": "tmdb_id=101857, job=Director|wiki_matched"
+    },
+    {
+      "drama_title": "17세의 조건",
+      "year": 2019,
+      "role": "director",
+      "channel": "SBS",
+      "day_slot": "일화",
+      "time_slot": "10:00",
+      "avg_rating": 2.8,
+      "first_ep_rating": null,
+      "max_rating": 3.0,
+      "is_lead": true,
+      "notes": "tmdb_id=91825, job=Director|wiki_matched"
+    },
+    {
+      "drama_title": "라이어",
+      "year": 0,
+      "role": "director",
+      "channel": "MBC",
+      "day_slot": null,
+      "time_slot": "21:00",
+      "avg_rating": null,
+      "first_ep_rating": null,
+      "max_rating": null,
+      "is_lead": true,
+      "notes": "tmdb_id=307478, job=Director|wiki_matched"
+    }
+  ]
+}

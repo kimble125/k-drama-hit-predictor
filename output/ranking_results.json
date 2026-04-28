@@ -1,0 +1,175 @@
+{
+  "measurement_date": "2026.04.05",
+  "alpha": 0.15,
+  "methodology": "H-Score v2 Triple KPI (first_ep 0.30 + avg 0.50 + rsi_victory 0.20)",
+  "results": [
+    {
+      "title": "21세기 대군부인",
+      "platform": "MBC+Disney+",
+      "genre": "로맨스,사극",
+      "release_date": "2026.04.10",
+      "combined": 73.2,
+      "first_ep": 77.0,
+      "avg": 69.4,
+      "rsi_victory": 76.8,
+      "verdict": "🔥 중박 이상",
+      "axis_scores": {
+        "cast_power": 10.0,
+        "creator_power": 8.0,
+        "ip_power": 2.0,
+        "platform_strategy": 7.0,
+        "pre_buzz": 8.34,
+        "genre_market_fit": 6.0
+      },
+      "pre_buzz_raw": 9.0,
+      "pre_buzz_adjusted": 8.34
+    },
+    {
+      "title": "유미의 세포들3",
+      "platform": "TVING→tvN",
+      "genre": "공감,로맨스",
+      "release_date": "2026.04.13",
+      "combined": 67.5,
+      "first_ep": 64.5,
+      "avg": 68.7,
+      "rsi_victory": 68.9,
+      "verdict": "🔥 중박 이상",
+      "axis_scores": {
+        "cast_power": 7.0,
+        "creator_power": 7.0,
+        "ip_power": 9.0,
+        "platform_strategy": 7.0,
+        "pre_buzz": 5.14,
+        "genre_market_fit": 6.0
+      },
+      "pre_buzz_raw": 5.0,
+      "pre_buzz_adjusted": 5.14
+    },
+    {
+      "title": "오늘도 매진했습니다",
+      "platform": "SBS+Netflix",
+      "genre": "로맨스,코미디",
+      "release_date": "2026.04.22",
+      "combined": 64.5,
+      "first_ep": 65.2,
+      "avg": 62.1,
+      "rsi_victory": 69.3,
+      "verdict": "⚡ 승부처",
+      "axis_scores": {
+        "cast_power": 8.0,
+        "creator_power": 8.0,
+        "ip_power": 2.0,
+        "platform_strategy": 8.0,
+        "pre_buzz": 5.96,
+        "genre_market_fit": 5.0
+      },
+      "pre_buzz_raw": 5.0,
+      "pre_buzz_adjusted": 5.96
+    },
+    {
+      "title": "모두가 자신의 무가치함과 싸우고 있다",
+      "platform": "JTBC+Netflix+TVING",
+      "genre": "휴먼드라마",
+      "release_date": "2026.04.18",
+      "combined": 60.7,
+      "first_ep": 61.7,
+      "avg": 59.4,
+      "rsi_victory": 62.2,
+      "verdict": "⚡ 승부처",
+      "axis_scores": {
+        "cast_power": 7.0,
+        "creator_power": 6.0,
+        "ip_power": 2.0,
+        "platform_strategy": 8.0,
+        "pre_buzz": 5.67,
+        "genre_market_fit": 7.0
+      },
+      "pre_buzz_raw": 5.0,
+      "pre_buzz_adjusted": 5.67
+    },
+    {
+      "title": "골드랜드",
+      "platform": "Disney+",
+      "genre": "범죄,서스펜스",
+      "release_date": "2026.04.29",
+      "combined": 54.4,
+      "first_ep": 53.7,
+      "avg": 54.1,
+      "rsi_victory": 56.1,
+      "verdict": "❓ 다크호스",
+      "axis_scores": {
+        "cast_power": 6.0,
+        "creator_power": 5.0,
+        "ip_power": 2.0,
+        "platform_strategy": 9.0,
+        "pre_buzz": 3.8,
+        "genre_market_fit": 7.0
+      },
+      "pre_buzz_raw": 3.0,
+      "pre_buzz_adjusted": 3.8
+    },
+    {
+      "title": "은밀한 감사",
+      "platform": "tvN+TVING",
+      "genre": "오피스,로맨틱코미디",
+      "release_date": "2026.04.25",
+      "combined": 53.7,
+      "first_ep": 54.2,
+      "avg": 52.2,
+      "rsi_victory": 56.5,
+      "verdict": "❓ 다크호스",
+      "axis_scores": {
+        "cast_power": 7.0,
+        "creator_power": 6.0,
+        "ip_power": 2.0,
+        "platform_strategy": 6.0,
+        "pre_buzz": 4.91,
+        "genre_market_fit": 5.0
+      },
+      "pre_buzz_raw": 4.0,
+      "pre_buzz_adjusted": 4.91
+    },
+    {
+      "title": "허수아비",
+      "platform": "ENA+GenieTV",
+      "genre": "범죄,수사,스릴러",
+      "release_date": "2026.04.20",
+      "combined": 48.6,
+      "first_ep": 46.0,
+      "avg": 50.2,
+      "rsi_victory": 48.3,
+      "verdict": "❓ 다크호스",
+      "axis_scores": {
+        "cast_power": 6.0,
+        "creator_power": 5.0,
+        "ip_power": 3.0,
+        "platform_strategy": 4.0,
+        "pre_buzz": 3.49,
+        "genre_market_fit": 7.0
+      },
+      "pre_buzz_raw": 3.0,
+      "pre_buzz_adjusted": 3.49
+    },
+    {
+      "title": "기리고",
+      "platform": "Netflix",
+      "genre": "영어덜트,호러",
+      "release_date": "2026.04.24",
+      "combined": 41.3,
+      "first_ep": 40.8,
+      "avg": 41.3,
+      "rsi_victory": 41.9,
+      "verdict": "📉 난항 예상",
+      "axis_scores": {
+        "cast_power": 3.0,
+        "creator_power": 3.0,
+        "ip_power": 2.0,
+        "platform_strategy": 10.0,
+        "pre_buzz": 2.43,
+        "genre_market_fit": 6.0
+      },
+      "pre_buzz_raw": 2.0,
+      "pre_buzz_adjusted": 2.43
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "session_summary": "K-Drama Hit Predictor 파이프라인 버그 수정 및 데이터 정합성 보완 작업",
+  "queries": [
+    {
+      "step": 1,
+      "user_input": "LOCAL_EXECUTION_GUIDE.md 의 작업방향대 진행해줘. 요약하면 2. 패키지 설치 3. 위키백과 메타 수집 4. 나무위키 보완 5. 재계산 6. output/recalculated_results_v2.json 산출"
+    },
+    {
+      "step": 2,
+      "user_input": "fetch_wikipedia_meta.py 잘 돌린거야? data/wikipedia_meta.json 생성했어? 안됐으면 이걸 생성해야하지 않아?"
+    },
+    {
+      "step": 3,
+      "user_input": "output/recalculated_results_v2.json 이 wikipedia_meta.json 와 namuwiki_meta.json 의 결과를 잘 반영한거야? 왜 21세기 대군부인의 'name': '아이유', 'rsi': 0.0 이지? 제대로 반영 안된거면 코드 다시 돌려서 output/recalculated_results_v2.json 를 재산출해줘."
+    },
+    {
+      "step": 4,
+      "user_input": "output/recalculated_results_v2.json 에 오류들이 많은데 이유가 뭐지? 21세기 대군부인에 성동일과 이지아는 출연 안했어. 아이유, 변우석, 노상현, 공승연 등 출연이야. creator_auto에서도 감독은 맞는데 김도하 작가가 아니고 유지원 자가야. '은밀한 감사' 에서도 '김원해'는 출연 안했어. 신혜선, 공명, 김재욱, 홍화연 등이야. creator_auto에서도 이수현 연출에 여은호 각본이야. 왜 이런 식으로 조금씩 잘못된 점들이 있는거지? 네가 파일들 전반을 살펴보고, 필요하면 네가 직접 인터넷 검색도 해서 이유를 파악해줘."
+    },
+    {
+      "step": 5,
+      "user_input": "지금까지 우리 작업 기록을 Claude에서 학습시킬 수 있도록 우리 질의내용과 파일 변경 내역을 하나의 파일 json으로 만들어서 docs에다 추가해줘."
+    }
+  ],
+  "file_changes": [
+    {
+      "file_path": "src/hit_predictor/data/wikipedia_fetcher.py",
+      "change_summary": "위키백과 인포박스 파싱 로직 및 시청률 폴백 추가",
+      "details": "인포박스가 템플릿 중첩으로 인해 제대로 파싱되지 않던 문제를 해결하고, 인포박스에 시청률 정보가 없을 경우 문서 본문의 '== 시청률 ==' 섹션을 탐색하여 평균/최고 시청률을 자동 추출하는 폴백 로직을 구현함."
+    },
+    {
+      "file_path": "scripts/fetch_wikipedia_meta.py",
+      "change_summary": "시청률 누락 항목 캐시 무효화 조건 추가",
+      "details": "기존 캐시에 존재하는 드라마라도 'avg_rating'이 없으면 위키백과를 다시 스크래핑하도록 캐시 스킵 조건을 보완함."
+    },
+    {
+      "file_path": "data/candidate_dramas.csv",
+      "change_summary": "드라마 캐스팅 및 제작진 정보 최신화",
+      "details": "물망 단계의 오류 데이터(성동일, 이지아 등)를 최종 확정 캐스팅(노상현, 공승연, 홍화연 등) 및 확정된 제작진(이수현 감독, 유지원/여은호 작가)으로 수정함."
+    },
+    {
+      "file_path": "src/hit_predictor/rsi/calculator.py",
+      "change_summary": "RSI 산출 로직 버그 및 KeyError 픽스",
+      "details": "TMDB API의 order 필드 누락으로 인해 모든 작품이 is_lead=False로 판별되어 KeyError('n_tv')가 발생하던 문제를 해결. 주연(is_lead) 필터링 후 남는 작품이 0개일 경우, 전체 필모그래피를 포함하여 계산을 재시도하는 Fallback 로직을 추가하여 아이유, 김고은 등의 점수 증발을 방지함."
+    },
+    {
+      "file_path": "data/filmography/...",
+      "change_summary": "신규 인물 TMDB 필모그래피 수집 및 복구",
+      "details": "CSV에 업데이트된 신규 인물들의 TMDB 데이터를 수집하였으며, 기존 수기 수정 데이터가 덮어씌워진 문제를 해결하기 위해 백업 본(k-drama-hit-predictor 1)에서 정상 데이터를 복구함."
+    },
+    {
+      "file_path": "data/wikipedia_meta.json",
+      "change_summary": "위키백과 시청률 및 메타데이터 업데이트",
+      "details": "fetch_wikipedia_meta.py 실행을 통해 전체 드라마의 방영 시간대, 평균/최고 시청률 등의 데이터가 최신 상태로 갱신됨."
+    },
+    {
+      "file_path": "output/recalculated_results_v2.json",
+      "change_summary": "H-Score 재산출 최종 결과물 생성",
+      "details": "데이터 오류 수정 및 RSI 버그 패치가 완료된 파이프라인을 최종 실행하여, 21세기 대군부인(54.6점) 및 은밀한 감사(48.1점) 등 각 후보 드라마의 정확한 예측 점수를 재산출함."
+    }
+  ]
+}

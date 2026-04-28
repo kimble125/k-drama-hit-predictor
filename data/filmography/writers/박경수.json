@@ -1,0 +1,99 @@
+{
+  "name": "박경수",
+  "primary_role": "writer",
+  "award_count_5y": 0,
+  "sns_followers": null,
+  "credits": [
+    {
+      "drama_title": "돌풍",
+      "year": 2024,
+      "role": "writer",
+      "channel": "Netflix",
+      "day_slot": null,
+      "time_slot": null,
+      "avg_rating": null,
+      "first_ep_rating": null,
+      "max_rating": null,
+      "is_lead": true,
+      "notes": "tmdb_id=223329, job=Writer"
+    },
+    {
+      "drama_title": "귓속말",
+      "year": 2017,
+      "role": "writer",
+      "channel": "SBS",
+      "day_slot": "월화",
+      "time_slot": "10:00",
+      "avg_rating": 15.4,
+      "first_ep_rating": null,
+      "max_rating": 21.8,
+      "is_lead": true,
+      "notes": "tmdb_id=69974, job=Writer"
+    },
+    {
+      "drama_title": "펀치",
+      "year": 2014,
+      "role": "writer",
+      "channel": "SBS",
+      "day_slot": "일화",
+      "time_slot": "22:00",
+      "avg_rating": 11.1,
+      "first_ep_rating": null,
+      "max_rating": 17.2,
+      "is_lead": true,
+      "notes": "tmdb_id=61799, job=Writer"
+    },
+    {
+      "drama_title": "황금의 제국",
+      "year": 2013,
+      "role": "writer",
+      "channel": "SBS",
+      "day_slot": "일화",
+      "time_slot": "10:00",
+      "avg_rating": 11.2,
+      "first_ep_rating": null,
+      "max_rating": 13.8,
+      "is_lead": true,
+      "notes": "tmdb_id=58776, job=Writer"
+    },
+    {
+      "drama_title": "추적자",
+      "year": 2012,
+      "role": "writer",
+      "channel": "SBS",
+      "day_slot": null,
+      "time_slot": null,
+      "avg_rating": null,
+      "first_ep_rating": null,
+      "max_rating": null,
+      "is_lead": true,
+      "notes": "tmdb_id=44729, job=Writer"
+    },
+    {
+      "drama_title": "태왕사신기",
+      "year": 2007,
+      "role": "writer",
+      "channel": "MBC",
+      "day_slot": "일화",
+      "time_slot": "09:55",
+      "avg_rating": 27.3,
+      "first_ep_rating": null,
+      "max_rating": 35.7,
+      "is_lead": true,
+      "notes": "tmdb_id=14801, job=Writer"
+    },
+    {
+      "drama_title": "내 인생의 스페셜",
+      "year": 2006,
+      "role": "writer",
+      "channel": "MBC",
+      "day_slot": "일화",
+      "time_slot": "09:55",
+      "avg_rating": 10.6,
+      "first_ep_rating": null,
+      "max_rating": 11.3,
+      "is_lead": true,
+      "notes": "tmdb_id=23977, job=Writer"
+    }
+  ]
+}

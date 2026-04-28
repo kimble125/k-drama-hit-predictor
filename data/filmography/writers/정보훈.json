@@ -1,0 +1,47 @@
+{
+  "name": "정보훈",
+  "primary_role": "writer",
+  "award_count_5y": 0,
+  "sns_followers": null,
+  "credits": [
+    {
+      "drama_title": "이웃집 킬러",
+      "year": 2025,
+      "role": "writer",
+      "channel": "TVING",
+      "day_slot": "일일",
+      "time_slot": "08:50",
+      "avg_rating": null,
+      "first_ep_rating": null,
+      "max_rating": null,
+      "is_lead": true,
+      "notes": "tmdb_id=298493, job=Writer"
+    },
+    {
+      "drama_title": "라켓소년단",
+      "year": 2021,
+      "role": "writer",
+      "channel": "SBS",
+      "day_slot": "일화",
+      "time_slot": "11:10",
+      "avg_rating": null,
+      "first_ep_rating": null,
+      "max_rating": null,
+      "is_lead": true,
+      "notes": "tmdb_id=125437, job=Writer"
+    },
+    {
+      "drama_title": "슬기로운 감빵생활",
+      "year": 2017,
+      "role": "writer",
+      "channel": "tvN",
+      "day_slot": "일목",
+      "time_slot": "09:10",
+      "avg_rating": 7.6,
+      "first_ep_rating": null,
+      "max_rating": 11.3,
+      "is_lead": true,
+      "notes": "tmdb_id=74821, job=Writer"
+    }
+  ]
+}

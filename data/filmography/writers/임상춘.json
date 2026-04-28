@@ -1,0 +1,60 @@
+{
+  "name": "임상춘",
+  "primary_role": "writer",
+  "award_count_5y": 0,
+  "sns_followers": null,
+  "credits": [
+    {
+      "drama_title": "폭싹 속았수다",
+      "year": 2025,
+      "role": "writer",
+      "channel": "Netflix",
+      "day_slot": null,
+      "time_slot": null,
+      "avg_rating": null,
+      "first_ep_rating": null,
+      "max_rating": null,
+      "is_lead": true,
+      "notes": "tmdb_id=219246, job=Writer"
+    },
+    {
+      "drama_title": "동백꽃 필 무렵",
+      "year": 2019,
+      "role": "writer",
+      "channel": "KBS2",
+      "day_slot": "일목",
+      "time_slot": "10:00",
+      "avg_rating": 13.2,
+      "first_ep_rating": null,
+      "max_rating": 24.9,
+      "is_lead": true,
+      "notes": "tmdb_id=93097, job=Writer"
+    },
+    {
+      "drama_title": "쌈 마이웨이",
+      "year": 2017,
+      "role": "writer",
+      "channel": "KBS2",
+      "day_slot": "일화",
+      "time_slot": "10:00",
+      "avg_rating": 10.6,
+      "first_ep_rating": null,
+      "max_rating": 14.4,
+      "is_lead": true,
+      "notes": "tmdb_id=70813, job=Screenplay"
+    },
+    {
+      "drama_title": "백희가 돌아왔다",
+      "year": 2016,
+      "role": "writer",
+      "channel": "KBS2",
+      "day_slot": "일화",
+      "time_slot": "22:00",
+      "avg_rating": null,
+      "first_ep_rating": null,
+      "max_rating": null,
+      "is_lead": true,
+      "notes": "tmdb_id=66715, job=Screenplay"
+    }
+  ]
+}

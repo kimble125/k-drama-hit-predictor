@@ -1,0 +1,99 @@
+{
+  "name": "신경수",
+  "primary_role": "director",
+  "award_count_5y": 0,
+  "sns_followers": null,
+  "credits": [
+    {
+      "drama_title": "신사장 프로젝트",
+      "year": 2025,
+      "role": "director",
+      "channel": "tvN",
+      "day_slot": null,
+      "time_slot": "08:50",
+      "avg_rating": null,
+      "first_ep_rating": null,
+      "max_rating": null,
+      "is_lead": true,
+      "notes": "tmdb_id=286198, job=Director|wiki_matched"
+    },
+    {
+      "drama_title": "소방서 옆 경찰서",
+      "year": 2022,
+      "role": "director",
+      "channel": "SBS",
+      "day_slot": null,
+      "time_slot": "11:20",
+      "avg_rating": 8.4,
+      "first_ep_rating": null,
+      "max_rating": 10.9,
+      "is_lead": true,
+      "notes": "tmdb_id=211261, job=Director|wiki_matched"
+    },
+    {
+      "drama_title": "조선구마사",
+      "year": 2021,
+      "role": "director",
+      "channel": "SBS",
+      "day_slot": "일화",
+      "time_slot": "10:00",
+      "avg_rating": 7.1,
+      "first_ep_rating": null,
+      "max_rating": 9.9,
+      "is_lead": true,
+      "notes": "tmdb_id=113624, job=Director|wiki_matched"
+    },
+    {
+      "drama_title": "녹두꽃",
+      "year": 2019,
+      "role": "director",
+      "channel": "SBS",
+      "day_slot": "일토",
+      "time_slot": "10:00",
+      "avg_rating": 7.0,
+      "first_ep_rating": null,
+      "max_rating": 13.2,
+      "is_lead": true,
+      "notes": "tmdb_id=88398, job=Director|wiki_matched"
+    },
+    {
+      "drama_title": "의문의 일승",
+      "year": 2017,
+      "role": "director",
+      "channel": "SBS",
+      "day_slot": "일화",
+      "time_slot": "10:00",
+      "avg_rating": 6.4,
+      "first_ep_rating": null,
+      "max_rating": 9.8,
+      "is_lead": true,
+      "notes": "tmdb_id=74830, job=Director|wiki_matched"
+    },
+    {
+      "drama_title": "육룡이 나르샤",
+      "year": 2015,
+      "role": "director",
+      "channel": "SBS",
+      "day_slot": null,
+      "time_slot": "11:10",
+      "avg_rating": 13.8,
+      "first_ep_rating": null,
+      "max_rating": 19.3,
+      "is_lead": true,
+      "notes": "tmdb_id=63927, job=Director|wiki_matched"
+    },
+    {
+      "drama_title": "쓰리 데이즈",
+      "year": 2014,
+      "role": "director",
+      "channel": "SBS",
+      "day_slot": null,
+      "time_slot": "22:00",
+      "avg_rating": 12.9,
+      "first_ep_rating": null,
+      "max_rating": 17.4,
+      "is_lead": true,
+      "notes": "tmdb_id=61157, job=Director|wiki_matched"
+    }
+  ]
+}

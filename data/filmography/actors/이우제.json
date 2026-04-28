@@ -1,0 +1,73 @@
+{
+  "name": "이우제",
+  "primary_role": "actor",
+  "award_count_5y": 0,
+  "sns_followers": null,
+  "credits": [
+    {
+      "drama_title": "밤에 피는 꽃",
+      "year": 2024,
+      "role": "actor",
+      "channel": "MBC",
+      "day_slot": null,
+      "time_slot": "09:50",
+      "avg_rating": 11.7,
+      "first_ep_rating": null,
+      "max_rating": 18.4,
+      "is_lead": true,
+      "notes": "tmdb_id=220836, order=None"
+    },
+    {
+      "drama_title": "소방서 옆 경찰서",
+      "year": 2022,
+      "role": "actor",
+      "channel": "SBS",
+      "day_slot": null,
+      "time_slot": "11:20",
+      "avg_rating": 8.4,
+      "first_ep_rating": null,
+      "max_rating": 10.9,
+      "is_lead": true,
+      "notes": "tmdb_id=211261, order=None"
+    },
+    {
+      "drama_title": "멀리서 보면 푸른 봄",
+      "year": 2021,
+      "role": "actor",
+      "channel": "KBS2",
+      "day_slot": "일화",
+      "time_slot": "09:30",
+      "avg_rating": 2.0,
+      "first_ep_rating": null,
+      "max_rating": 2.6,
+      "is_lead": true,
+      "notes": "tmdb_id=126436, order=None"
+    },
+    {
+      "drama_title": "여신강림",
+      "year": 2020,
+      "role": "actor",
+      "channel": "tvN",
+      "day_slot": "일목",
+      "time_slot": "10:40",
+      "avg_rating": 4.0,
+      "first_ep_rating": null,
+      "max_rating": 5.371,
+      "is_lead": true,
+      "notes": "tmdb_id=112888, order=None"
+    },
+    {
+      "drama_title": "수상한 파트너",
+      "year": 2017,
+      "role": "actor",
+      "channel": "SBS",
+      "day_slot": "일목",
+      "time_slot": "10:00",
+      "avg_rating": 8.0,
+      "first_ep_rating": null,
+      "max_rating": 11.7,
+      "is_lead": true,
+      "notes": "tmdb_id=71349, order=None"
+    }
+  ]
+}
