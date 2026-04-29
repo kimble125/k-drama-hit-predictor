@@ -1,8 +1,15 @@
-# 🔄 Hit-Predictor v5 — GPT 이어받기 핸드오프 (v3.1 직후)
+# 🔄 Hit-Predictor v5 — GPT 이어받기 핸드오프 (v3.1 + 정정·재계산 완료)
 
 > **이 문서는 ChatGPT(GPT-4/5 계열)에서 이 프로젝트 작업을 이어받기 위한 자족적(self-contained) 핸드오프입니다.**
 >
-> Claude Code 작업방에서 v3.1 (RSI 시간 감쇠 즉시 누진 정책 + Netflix Top10 raw 격리)까지 commit·push 완료 시점의 컨텍스트입니다. GPT는 파일 시스템 접근이 제한될 수 있으므로, 이 문서 하나로 작업 재개에 필요한 모든 정보를 담았습니다.
+> Claude Code 작업방에서 v3.1 (RSI 시간 감쇠 즉시 누진 + Netflix Top10 raw 격리) → **CSV 정정 + filmography 정리 + v3 재계산** 까지 완료한 시점의 컨텍스트입니다. GPT는 파일 시스템 접근이 제한될 수 있으므로, 이 문서 하나로 작업 재개에 필요한 모든 정보를 담았습니다.
+
+> **2026-04-29 추가 작업 요약**
+> - `candidate_dramas.csv` 5개 필드 오류 수정 + `로맨스의 절댓값` 추가 (8 → 9편)
+> - `non_drama_hscore_calibration.py` 위치 수정 (data → scripts)
+> - filmography orphan 22개 → `_archived_v1/` 보관
+> - `recalculate_candidates.py` v3 출력 지원 + 실행 → `output/recalculated_results_v3.{json,csv}` 산출
+> - main 브랜치 merge 진행
 
 ---
 
@@ -196,20 +203,23 @@ data/netflix_top10/*.xlsx
 
 ```
 data/
-├── candidate_dramas.csv       # 후보작 CSV (수정 대상)
-├── completed_dramas.csv        # 완료작
-├── filmography_merged.json     # 통합 필모
-├── wikipedia_meta.json         # 위키 메타
-├── namuwiki_meta.json          # 나무위키 메타
-├── discovered/2026-04.json     # v3 자동 발견 결과 (4월 9/9편)
+├── candidate_dramas.csv          # 후보작 CSV (v3.1: 9편, 정정·로맨스의 절댓값 추가)
+├── candidate_dramas_quality.json # 결측 사유 + 출처 추적 (v3 신규)
+├── completed_dramas.csv           # 완료작
+├── filmography_merged.json        # 통합 필모
+├── wikipedia_meta.json            # 위키 메타
+├── namuwiki_meta.json             # 나무위키 메타
+├── discovered/2026-04.json        # v3 자동 발견 결과
 ├── filmography/
-│   ├── actors/    (개별 배우 JSON)
-│   ├── directors/
-│   └── writers/
+│   ├── actors/    (21명 active, 개별 배우 JSON)
+│   ├── directors/ (2명 active: 박준화, 이상엽)
+│   ├── writers/   (1명 active: 송재정)
+│   └── _archived_v1/ (22개 orphan + README.md)
 └── awards/
 output/
 ├── ranking_results.{csv,json}
-└── recalculated_results_v2.{csv,json}   # v3 재계산은 미수행
+├── recalculated_results_v2.{csv,json}   # legacy baseline (full=5, λ=0.15)
+└── recalculated_results_v3.{csv,json}   # v3.1 (full=0, λ=0.10) — 2026-04-29 산출
 docs/
 ├── blog_draft_01_rsi_ott_extension.md
 ├── GITHUB_PUSH_GUIDE.md
@@ -240,23 +250,41 @@ GPT가 토큰을 출력하지 않도록 주의. 코드에서는 `os.getenv("TMDB
 
 ## 6. 알려진 한계 — 다음 작업방에서 처리할 것
 
-### 6-1. Phase 1-C 정제 (미해결 5건)
+### 6-1. Phase 1-C 자동 수집 한계 (스크립트 버그 — 잔존)
 
-`build_candidate_dramas.py`의 출력에서 다음 케이스가 미정제:
+`build_candidate_dramas.py`로 9편 자동 빌드 결과(2026-04-29 검증):
 
-| 케이스 | 현상 | 원인 추정 | 해결 방향 |
+| 케이스 | 자동 수집 결과 | 원인 | CSV 처리 (v3.1) |
 |---|---|---|---|
-| **허수아비** | 감독·작가·캐스트 모두 None | 나무위키 페이지 인포박스 셀렉터 미스매치 | 페이지 HTML 보고 셀렉터 보강 |
-| **기리고** | 감독 None, 작가만 잡힘 | 인포박스 행 라벨 변형 | `(연출\|감독\|디렉터)` 라벨 사전 확장 |
-| **로맨스의 절댓값** | 감독·작가 None | 인포박스가 부분만 채워짐 | wikipedia 보완 + 방송사 공식 fallback |
-| **골드랜드** | `lead_actors=["박보영 김성철"]` 한 묶음 | HTML strong 안에 두 이름이 공백 결합 | strong 텍스트를 한국 이름 2-4글자 패턴으로 추가 split |
-| **유미의 세포들 3** | 나무위키 매칭 실패 | URL `유미의 세포들 3` ≠ `유미의 세포들3` (공백) | 공백 정규화 후 redirect 검색 추가 |
+| **유미의 세포들3** | 모두 None (소스 매칭 실패) | URL `유미의 세포들 3` ≠ `유미의 세포들3` 공백 정규화 미해결 | 수동 보완 적용 (HANDOFF_v3 검증값) |
+| **허수아비** | 모두 None (소스 호출은 됐으나 인포박스 미파싱) | 나무위키 인포박스 셀렉터 미스매치 | 수동 보완 적용 |
+| **기리고** | director None, writer ✅ | 인포박스 행 라벨 변형 (`(연출\|감독)` 사전 부족) | 감독만 수동 보완 |
+| **골드랜드** | lead_actors `"박보영 김성철"` 한 묶음 (2명만, 공백 결합) | HTML strong 안에 이름이 공백 결합 + 6명 중 2명만 추출 | 6명 전체 수동 덮어쓰기 |
+| **로맨스의 절댓값** | director·writer None, cast 잡힘 | 마이너 신작 — 인포박스가 부분만 채워짐 | director·writer 수동 보완 보류(추후 nielsen/방송사 fallback) |
+
+**스크립트 자동 정정 검증된 사항 (HANDOFF_v4 주장 ✅)**:
+- 모두가 자신의…: director "박현석"(v2) → **"차영훈"** 자동 정정 ✅
+- 모두가 자신의…: writer "정보훈"(v2) → **"박해영"** 자동 정정 ✅
+- 골드랜드: director "박현석"(v2) → **"김성훈"** 자동 정정 ✅
+- 골드랜드: writer "임상춘"(v2) → **"황조윤"** 자동 정정 ✅
+- 모두가 자신의…: cast가 4명에서 8명으로 확장 (강말금/배종옥/한선화/최원영 추가)
+- 21세기 대군부인: director가 박준화 → "박준화|배희영" (공동연출 정보 추가)
 
 **디버깅 명령**:
 ```bash
-python3 scripts/build_candidate_dramas.py --year 2026 --month 4 \
-    --titles "허수아비,기리고,로맨스의 절댓값,골드랜드,유미의 세포들 3" --dry-run
+python3 scripts/build_candidate_dramas.py --year 2026 \
+    --titles "허수아비,기리고,로맨스의 절댓값,골드랜드,유미의 세포들3" \
+    --out /tmp/test.csv  # --dry-run 없이 실제 산출
 ```
+
+### 6-1-B. v3 정정 시 자동 수집 vs 기존 CSV 충돌 (검증 필요)
+
+| 드라마 | 필드 | v2 CSV (수기) | v3 자동수집 (wikipedia) | 처리 |
+|---|---|---|---|---|
+| **오늘도 매진했습니다** | director | 조영민 | **이슬기** | 자동수집값 채택 — 사용자 검증 필요 |
+| **오늘도 매진했습니다** | writer | 이영미 | **진승희** | 자동수집값 채택 — 사용자 검증 필요 |
+
+GPT 작업 시 **이 두 필드는 추가 검증 권장**. 미루님이 원본 자료(MBC 공식, 펀덱스 등) 확인 후 결정.
 
 ### 6-2. 알고리즘 개선 백로그
 
@@ -266,23 +294,89 @@ python3 scripts/build_candidate_dramas.py --year 2026 --month 4 \
 4. **벤치마크: 단일 평균 → 분포** — 동시간대 *실제 경쟁작 분포*(Top3 평균 등)로 대체 시 강한 슬롯 win이 더 어려워짐
 5. **🆕 한국어→영문 제목 매핑** (v3.1 발견) — Netflix Top10 매칭 실패 케이스. TMDB로 자동 매핑 권장
 
-### 6-3. 미수행 통합 단계
+### 6-3. 산출물 최신화 + 잔존 작업
 
-- **`recalculated_results_v3.json` 미생성**: v3.1 변경(decay rate) 효과를 전체 후보작에 적용한 결과 미산출. v3가 baseline.
+#### 산출 완료 (v3.1)
+- ✅ `output/recalculated_results_v3.{json,csv}` — 9편 v3.1 H-Score 산출 (decay 즉시 누진 + role_weight 적용)
+
+#### v3 결과 vs v2 비교 (요약)
+
+| 드라마 | v2 H-Score | v3 H-Score | Δ | 비고 |
+|---|---|---|---|---|
+| 21세기 대군부인 | 54.4 | **66.1** | +11.7 | **1위 (v3.1 decay 효과)** |
+| 모두가 자신의… | 63.9 | 62.5 | −1.4 | 캐스트 8명 확장 |
+| 오늘도 매진했습니다 | 47.6 | 60.5 | +12.9 | director/writer 자동수집 변경 |
+| 골드랜드 | 58.9 | 54.4 | −4.5 | **신규 캐스트 6명 filmography 미수집 → cast=N/A** |
+| 유미의 세포들3 | 56.1 | 53.8 | −2.3 | 캐스트 정정 (김재원/전석호/최다니엘 missing) |
+| 허수아비 | 50.4 | 50.4 | 0.0 | |
+| 은밀한 감사 | 50.0 | 49.0 | −1.0 | |
+| 기리고 | 44.5 | 44.9 | +0.4 | |
+| **로맨스의 절댓값** | NEW | **37.2** | NEW | 캐스트 10명 모두 missing |
+
+#### 잔존 작업 — TMDB 필모그래피 자동 수집 (큰 영향)
+
+`recalculate`에서 **missing 처리되어 RSI=0 으로 산출된 인물들** — 향후 `fetch_tmdb_filmography.py`로 일괄 수집 필요:
+
+**ACTORS (26명 missing)**:
+- 21세기 대군부인: 노상현, 공승연
+- 유미의 세포들3: 김재원, 전석호, 최다니엘
+- 모두가 자신의…: 강말금, 배종옥, 한선화, 최원영
+- **골드랜드 (전원!)**: 박보영, 김성철, 이현욱, 김희원, 문정희, 이광수
+- **로맨스의 절댓값 (전원!)**: 여의주, 김향기, 가우수, 차학연, 노다주, 김재현, 정기전, 손정혁, 윤동주, 김동규
+- 기타: 가우수, 김향기, 등 (전체 26명)
+
+**DIRECTORS (7명 missing)**: 김성훈(골드랜드), 박윤서(기리고), 박준우(허수아비), 배희영(공동연출 21세기), 이수현(은밀한 감사), 이슬기(오늘도 매진), 차영훈(모두가)
+
+**WRITERS (7명 missing)**: 박중섭(기리고), 박해영(모두가), 여은호(은밀한 감사), 유지원(21세기), 이지현(허수아비), 진승희(오늘도 매진), 황조윤(골드랜드)
+
+**일괄 수집 명령**:
+```bash
+export TMDB_READ_TOKEN="..."  # 미루님이 직접 export
+python3 scripts/fetch_tmdb_filmography.py --names \
+    "박보영,김성철,이현욱,김희원,문정희,이광수,김재원,전석호,최다니엘,..." \
+    --role actor
+python3 scripts/fetch_tmdb_filmography.py --names \
+    "김성훈,박윤서,박준우,배희영,이수현,이슬기,차영훈" --role director
+python3 scripts/fetch_tmdb_filmography.py --names \
+    "박중섭,박해영,여은호,유지원,이지현,진승희,황조윤" --role writer
+
+# 수집 후 v4 재산출
+python3 scripts/recalculate_candidates.py --version v4
+```
+
+#### 기타 미수행
 - **펀덱스 자동화 미구현** (Phase 2-B): 청사진은 §8 참조
+- **로맨스의 절댓값 director·writer**: 자동수집 실패 → 사용자 자료 또는 방송사 공식 fallback 필요
+- **모두가 자신의…, 은밀한 감사 release_date**: wikipedia 미수록 → 보강 필요
+
+### 6-4. 필모그래피 정리 작업 결과 (2026-04-29)
+
+`data/filmography/_archived_v1/` 디렉터리에 22개 orphan 파일 보관 (`README.md` 포함):
+- ACTORS 10명 (v2 시점 잘못 매칭된 캐스트)
+- DIRECTORS 5명 (박현석/신경수/이충현/조영민/김종연)
+- WRITERS 7명 (임상춘/정보훈/박경수 등)
+
+이들은 v3 정정으로 더 이상 RSI 산출에 참조되지 않음. 향후 동명이인 검증용으로만 활용 가능.
 
 ---
 
 ## 7. 다음 작업 우선순위 (미루님 결정 사항)
 
 ```
-A. (우선) Phase 1-C 정제 — 허수아비/기리고/strong 분리/유미3 redirect — 1~2시간
-B. (우선) Phase 3 — 6축 점수 자동 산정 (auto_score.py 신규) — 2~3시간
-C. Phase 2-B — 펀덱스 PDF 아카이빙·파싱 — 2시간 (§8 청사진)
-D. 알고리즘 개선 — 영화 cross-media bonus + 베테랑 fallback — 1~2시간
-E. 통합 재계산 → recalculated_results_v3.json + 블로그 글 #2 — 1시간
-F. (v3.1 신규) 한국어↔영문 제목 매핑 (TMDB 기반) — 30분
+A. (✅ 완료) candidate_dramas.csv 정정 + 9편 확장 + 수동 보완 — 2026-04-29
+A'. (✅ 완료) recalculated_results_v3.json 산출
+
+B. (우선) TMDB 필모그래피 일괄 자동수집 — 26 actors + 7 dirs + 7 writers
+   → 그 다음 v4 재산출 (creator_score 정상화) — 1시간
+C. (우선) Phase 1-C 자동 수집 버그 픽스 — 5건 (§6-1) — 1~2시간
+D. Phase 3 — 6축 점수 자동 산정 (auto_score.py 신규) — 2~3시간
+E. Phase 2-B — 펀덱스 PDF 아카이빙·파싱 — 2시간 (§8 청사진)
+F. 알고리즘 개선 — 영화 cross-media bonus + 베테랑 fallback — 1~2시간
+G. 한국어↔영문 제목 매핑 (TMDB 기반, Netflix Top10 매칭용) — 30분
+H. 블로그 글 #2 (v3.1 결과 해설) — 1시간
 ```
+
+**B가 가장 ROI 큼**: 현재 v3 결과는 신규 director/writer 7+7명 모두 RSI=0 (creator_auto=0.0/10)이라 H-Score가 부정확함. TMDB로 채우면 모든 결과가 다시 변동.
 
 **미루님이 GPT에게 "어디부터 시작할지" 결정하면 그 단계만 집중해서 진행.**
 
@@ -401,18 +495,19 @@ python3 scripts/build_candidate_dramas.py --year 2026 \
 
 ---
 
-## 11. Git 상태 (커밋 시점 기준)
+## 11. Git 상태 (커밋 시점 기준 — 2026-04-29 정정·재계산 후)
 
 ```
-브랜치: feature/auto-collection-v3
-최신 커밋: 6b54d43
+브랜치: feature/auto-collection-v3 + main (병합 완료)
 
-커밋 히스토리:
-6b54d43 v3.1: RSI 시간 감쇠 즉시 누진 + Netflix Top10 raw 격리
-94350a3 Initial commit: v2 baseline + v3 auto-collection pipeline
+커밋 히스토리 (최신순):
+(이번 작업) v3.1 후속: CSV 정정 + filmography 정리 + v3 재계산 + 핸드오프 보완
+175a415   docs: v3.1 → GPT 이어받기용 핸드오프 (HANDOFF_v5.md)
+6b54d43   v3.1: RSI 시간 감쇠 즉시 누진 + Netflix Top10 raw 격리
+94350a3   Initial commit: v2 baseline + v3 auto-collection pipeline
 
 워킹 트리: clean
-원격: https://github.com/kimble125/k-drama-hit-predictor (push 완료)
+원격: https://github.com/kimble125/k-drama-hit-predictor — feature/auto-collection-v3 + main 모두 최신
 ```
 
 ⚠️ **부모 디렉터리 주의사항**: 이 프로젝트의 working dir(`/Users/kimble/.../k-drama-hit-predictor 3/`)은 사용자 홈(`/Users/kimble`)을 main worktree로 갖는 git의 *서브디렉터리*입니다. 따라서 `git status`에서 사용자 홈 시스템 파일들(예: `Library/Daemon Containers/`)이 노출될 수 있습니다.
@@ -471,9 +566,16 @@ python3 scripts/build_candidate_dramas.py --year 2026 \
 
 ---
 
-## 14. v3.1 작업방 요약 (1줄)
+## 14. 작업방 요약
 
-> 시간 감쇠를 v3 (5년 풀가중 후 λ=0.15) → **v3.1 (즉시 시작 + λ=0.10)**으로 변경해 1~5년 최근작 차등화를 강화했고, Netflix Top10 raw XLSX(28MB+) 두 파일을 .gitignore로 격리했다. 코드 자체와 환산 로직은 공개 유지. v3.1의 **`recalculated_results_v3.json` 산출은 다음 작업방으로 이월**.
+### v3.1 (1단계)
+> 시간 감쇠를 v3 (5년 풀가중 후 λ=0.15) → **v3.1 (즉시 시작 + λ=0.10)**으로 변경해 1~5년 최근작 차등화를 강화했고, Netflix Top10 raw XLSX(28MB+) 두 파일을 `.gitignore`로 격리했다. 코드 자체와 환산 로직은 공개 유지.
+
+### v3.1 후속 정정·재계산 (2단계, 2026-04-29)
+> `candidate_dramas.csv` 5개 필드 오류(유미3 캐스트, 모두가/골드랜드 감독·작가) 자동 정정 검증 후 보완 + 로맨스의 절댓값 추가(8→9편). filmography orphan 22개 `_archived_v1/`로 보관. `recalculate_candidates.py`에 `--version` 추가 후 실행 → **`output/recalculated_results_v3.{json,csv}` 산출** (1위: 21세기 대군부인 66.1, +11.7). main 브랜치 병합 + push 완료.
+
+### 다음 작업 1순위
+> TMDB filmography 일괄 자동수집 (26 actors + 7 dirs + 7 writers) → v4 재산출. 현재 v3는 신규 director/writer RSI=0이라 creator_score 부정확.
 
 ---
 

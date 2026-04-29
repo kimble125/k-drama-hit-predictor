@@ -5,11 +5,15 @@
 data/candidate_dramas.csv를 읽어, 각 드라마의 lead_actors/director/writer를
 data/filmography/에서 자동 로드하고 RSI 기반으로 H-Score 재계산.
 
-출력:
-    - output/recalculated_results_v2.json: 전체 결과
-    - output/recalculated_results_v2.csv: 순위표
-    - output/comparison_table.md: 이전 결과와 비교표
+출력 (--version v3 기본):
+    - output/recalculated_results_v{N}.json: 전체 결과
+    - output/recalculated_results_v{N}.csv: 순위표
+
+사용:
+    python scripts/recalculate_candidates.py                # 기본 v3
+    python scripts/recalculate_candidates.py --version v2   # legacy
 """
+import argparse
 import json
 import sys
 from pathlib import Path
@@ -93,11 +97,19 @@ def compute_creator_score(drama, filmography_root: Path) -> dict:
 
 
 def main() -> None:
+    p = argparse.ArgumentParser(description="후보 드라마 H-Score 자동 재계산")
+    p.add_argument("--version", default="v3",
+                   help="출력 버전 태그 (기본: v3 = v3.1 시간 감쇠 적용)")
+    p.add_argument("--csv", type=Path, default=None,
+                   help="입력 CSV (기본: data/candidate_dramas.csv)")
+    args = p.parse_args()
+
     root = Path(__file__).resolve().parent.parent
-    csv_path = root / "data" / "candidate_dramas.csv"
+    csv_path = args.csv or (root / "data" / "candidate_dramas.csv")
     filmography_root = root / "data" / "filmography"
     output_dir = root / "output"
     output_dir.mkdir(exist_ok=True)
+    version = args.version
 
     print(f"📂 후보 드라마 로드: {csv_path}")
     dramas = load_dramas_from_csv(csv_path)
@@ -174,16 +186,23 @@ def main() -> None:
     results.sort(key=lambda r: -r["combined"])
 
     # 저장
-    with (output_dir / "recalculated_results_v2.json").open("w", encoding="utf-8") as f:
+    json_path = output_dir / f"recalculated_results_{version}.json"
+    csv_out_path = output_dir / f"recalculated_results_{version}.csv"
+
+    methodology_map = {
+        "v2": "H-Score v2 Triple KPI with auto RSI (full=5, decay=0.15)",
+        "v3": "H-Score v3.1 Triple KPI — auto RSI + immediate decay (full=0, decay=0.10) + role_weight",
+    }
+    with json_path.open("w", encoding="utf-8") as f:
         json.dump({
             "measurement_date": MEASUREMENT_DATE,
-            "methodology": "H-Score v2 Triple KPI with auto RSI",
+            "methodology": methodology_map.get(version, f"H-Score {version}"),
             "results": results,
         }, f, ensure_ascii=False, indent=2)
 
     # CSV
     import csv as _csv
-    with (output_dir / "recalculated_results_v2.csv").open("w", encoding="utf-8-sig", newline="") as f:
+    with csv_out_path.open("w", encoding="utf-8-sig", newline="") as f:
         w = _csv.writer(f)
         w.writerow(["rank", "title", "combined", "first_ep", "avg", "rsi_victory",
                     "verdict", "cast_auto", "creator_auto", "platform", "release_date"])
@@ -193,7 +212,7 @@ def main() -> None:
                         r["cast_auto"].get("score"), r["creator_auto"].get("score"),
                         r["platform"], r["release_date"]])
 
-    print(f"\n💾 저장: {output_dir}/recalculated_results_v2.{{json,csv}}")
+    print(f"\n💾 저장: {json_path.name}, {csv_out_path.name}")
 
 
 if __name__ == "__main__":
