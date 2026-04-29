@@ -498,16 +498,18 @@ python3 scripts/build_candidate_dramas.py --year 2026 \
 ## 11. Git 상태 (커밋 시점 기준 — 2026-04-29 정정·재계산 후)
 
 ```
-브랜치: feature/auto-collection-v3 + main (병합 완료)
+브랜치: main (HEAD) ← feature/auto-collection-v3 병합 완료
 
 커밋 히스토리 (최신순):
-(이번 작업) v3.1 후속: CSV 정정 + filmography 정리 + v3 재계산 + 핸드오프 보완
+f018c28   Merge feature/auto-collection-v3: v3.1 auto-collection pipeline + 정정·재계산
+cdae678   v3.1 후속: CSV 정정 + filmography 정리 + v3 재계산
 175a415   docs: v3.1 → GPT 이어받기용 핸드오프 (HANDOFF_v5.md)
 6b54d43   v3.1: RSI 시간 감쇠 즉시 누진 + Netflix Top10 raw 격리
 94350a3   Initial commit: v2 baseline + v3 auto-collection pipeline
 
 워킹 트리: clean
-원격: https://github.com/kimble125/k-drama-hit-predictor — feature/auto-collection-v3 + main 모두 최신
+원격: https://github.com/kimble125/k-drama-hit-predictor — main + feature/auto-collection-v3 모두 최신
+참고: main은 force-with-lease push (이전 remote main의 별개 히스토리 — 4월 zip 기반 초기커밋들 — 정리됨)
 ```
 
 ⚠️ **부모 디렉터리 주의사항**: 이 프로젝트의 working dir(`/Users/kimble/.../k-drama-hit-predictor 3/`)은 사용자 홈(`/Users/kimble`)을 main worktree로 갖는 git의 *서브디렉터리*입니다. 따라서 `git status`에서 사용자 홈 시스템 파일들(예: `Library/Daemon Containers/`)이 노출될 수 있습니다.
