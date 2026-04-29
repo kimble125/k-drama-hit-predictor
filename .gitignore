@@ -9,6 +9,15 @@ data/nielsen_weekly/*.csv
 data/nielsen_weekly/*.json
 !data/nielsen_weekly/.gitkeep
 
+# ========================================
+# 🚨 Netflix Top 10 데이터 — 개인 연구·학습용만, 재판매 금지
+# ========================================
+# Netflix Tudum 공식 데이터 (https://www.netflix.com/tudum/top10/).
+# 다운로더(scripts/fetch_netflix_top10.py)와 환산 로직(rsi/ott_converter.py)은
+# 공개 가능. 원천 XLSX는 로컬 보관만.
+data/netflix_top10/*.xlsx
+!data/netflix_top10/.gitkeep
+
 # 기타 수집 원시 데이터 (로컬 보관만)
 data/raw/
 data/*_raw.csv

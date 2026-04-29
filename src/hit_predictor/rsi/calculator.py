@@ -35,8 +35,10 @@ from ..core.benchmarks import get_benchmark_for_credit
 # ────────────────────────────────────────────────────────────────
 # 상수
 # ────────────────────────────────────────────────────────────────
-DEFAULT_DECAY_RATE = 0.15
-DEFAULT_FULL_WEIGHT_YEARS = 5
+# v3.1: 콘텐츠 트렌드 변동 빠른 환경 반영 — 5년 풀가중 제거, 0년부터 즉시 누진 감쇠.
+#   1년 → 0.905, 3년 → 0.741, 5년 → 0.607, 10년 → 0.368, 15년 → 0.223
+DEFAULT_DECAY_RATE = 0.10
+DEFAULT_FULL_WEIGHT_YEARS = 0  # 즉시 감쇠 시작 (이전 v3까지는 5)
 DEFAULT_TV_BENCHMARK = 5.5
 OTT_TV_BENCHMARK = 6.0
 DRAW_THRESHOLD = 0.3
@@ -50,7 +52,10 @@ def time_decay_weight(
     full_weight_years: int = DEFAULT_FULL_WEIGHT_YEARS,
     decay_rate: float = DEFAULT_DECAY_RATE,
 ) -> float:
-    """Exponential decay weight."""
+    """Exponential decay weight — 0년부터 즉시 누진 감쇠 (full_weight_years=0 default).
+
+    full_weight_years > 0 이면 그 구간까지 풀가중 후 그 이후 감쇠 (legacy 호환).
+    """
     if years_ago < 0:
         return 1.0
     if years_ago <= full_weight_years:
