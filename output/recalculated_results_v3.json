@@ -1,0 +1,550 @@
+{
+  "measurement_date": "2026.04.05",
+  "methodology": "H-Score v3.1 Triple KPI — auto RSI + immediate decay (full=0, decay=0.10) + role_weight",
+  "results": [
+    {
+      "title": "21세기 대군부인",
+      "platform": "MBC+Disney+",
+      "release_date": "2026.04.10",
+      "combined": 66.1,
+      "first_ep": 69.4,
+      "avg": 63.6,
+      "rsi_victory": 67.5,
+      "verdict": "🔥 중박 이상",
+      "axis_scores": {
+        "cast_power": 6.5,
+        "creator_power": 8.0,
+        "ip_power": 2.0,
+        "platform_strategy": 7.0,
+        "pre_buzz": 8.34,
+        "genre_market_fit": 6.0
+      },
+      "cast_auto": {
+        "score": 6.5,
+        "avg_rsi": 0.645,
+        "max_rsi": 0.771,
+        "n_actors": 2,
+        "n_missing": 2,
+        "missing": [
+          "노상현",
+          "공승연"
+        ],
+        "individual": [
+          {
+            "name": "아이유",
+            "rsi": 0.771,
+            "rsgi": 3.0,
+            "n_tv": 6,
+            "n_ott": 0
+          },
+          {
+            "name": "변우석",
+            "rsi": 0.52,
+            "rsgi": 1.12,
+            "n_tv": 12,
+            "n_ott": 0
+          }
+        ]
+      },
+      "creator_auto": {
+        "director": null,
+        "writer": null,
+        "score": 0.0,
+        "director_rsi": 0.0,
+        "writer_rsi": 0.0
+      },
+      "original_manual_scores": {
+        "cast": 10.0,
+        "creator": 8.0,
+        "ip": 2.0,
+        "platform": 7.0,
+        "pre_buzz": null,
+        "genre": 6.0
+      }
+    },
+    {
+      "title": "모두가 자신의 무가치함과 싸우고 있다",
+      "platform": "JTBC+Netflix+TVING",
+      "release_date": null,
+      "combined": 62.5,
+      "first_ep": 62.8,
+      "avg": 61.2,
+      "rsi_victory": 65.3,
+      "verdict": "⚡ 승부처",
+      "axis_scores": {
+        "cast_power": 8.5,
+        "creator_power": 6.0,
+        "ip_power": 2.0,
+        "platform_strategy": 8.0,
+        "pre_buzz": 5.0,
+        "genre_market_fit": 7.0
+      },
+      "cast_auto": {
+        "score": 8.5,
+        "avg_rsi": 0.822,
+        "max_rsi": 1.0,
+        "n_actors": 4,
+        "n_missing": 4,
+        "missing": [
+          "강말금",
+          "배종옥",
+          "한선화",
+          "최원영"
+        ],
+        "individual": [
+          {
+            "name": "구교환",
+            "rsi": 1.0,
+            "rsgi": 7.19,
+            "n_tv": 2,
+            "n_ott": 0
+          },
+          {
+            "name": "고윤정",
+            "rsi": 0.815,
+            "rsgi": 0.66,
+            "n_tv": 4,
+            "n_ott": 0
+          },
+          {
+            "name": "오정세",
+            "rsi": 0.655,
+            "rsgi": 1.71,
+            "n_tv": 17,
+            "n_ott": 0
+          },
+          {
+            "name": "박해준",
+            "rsi": 0.817,
+            "rsgi": 3.94,
+            "n_tv": 8,
+            "n_ott": 0
+          }
+        ]
+      },
+      "creator_auto": {
+        "director": null,
+        "writer": null,
+        "score": 0.0,
+        "director_rsi": 0.0,
+        "writer_rsi": 0.0
+      },
+      "original_manual_scores": {
+        "cast": 7.0,
+        "creator": 6.0,
+        "ip": 2.0,
+        "platform": 8.0,
+        "pre_buzz": null,
+        "genre": 7.0
+      }
+    },
+    {
+      "title": "오늘도 매진했습니다",
+      "platform": "SBS+Netflix",
+      "release_date": "2026.04.22",
+      "combined": 60.5,
+      "first_ep": 60.9,
+      "avg": 58.8,
+      "rsi_victory": 63.9,
+      "verdict": "⚡ 승부처",
+      "axis_scores": {
+        "cast_power": 6.0,
+        "creator_power": 8.0,
+        "ip_power": 2.0,
+        "platform_strategy": 8.0,
+        "pre_buzz": 5.96,
+        "genre_market_fit": 5.0
+      },
+      "cast_auto": {
+        "score": 6.0,
+        "avg_rsi": 0.578,
+        "max_rsi": 0.727,
+        "n_actors": 3,
+        "n_missing": 1,
+        "missing": [
+          "고두심 외"
+        ],
+        "individual": [
+          {
+            "name": "안효섭",
+            "rsi": 0.663,
+            "rsgi": 3.36,
+            "n_tv": 11,
+            "n_ott": 0
+          },
+          {
+            "name": "채원빈",
+            "rsi": 0.344,
+            "rsgi": -0.99,
+            "n_tv": 3,
+            "n_ott": 0
+          },
+          {
+            "name": "김범",
+            "rsi": 0.727,
+            "rsgi": 1.56,
+            "n_tv": 11,
+            "n_ott": 0
+          }
+        ]
+      },
+      "creator_auto": {
+        "director": null,
+        "writer": null,
+        "score": 0.0,
+        "director_rsi": 0.0,
+        "writer_rsi": 0.0
+      },
+      "original_manual_scores": {
+        "cast": 8.0,
+        "creator": 8.0,
+        "ip": 2.0,
+        "platform": 8.0,
+        "pre_buzz": null,
+        "genre": 5.0
+      }
+    },
+    {
+      "title": "골드랜드",
+      "platform": "Disney+",
+      "release_date": "2026.04.29",
+      "combined": 54.4,
+      "first_ep": 53.7,
+      "avg": 54.1,
+      "rsi_victory": 56.1,
+      "verdict": "❓ 다크호스",
+      "axis_scores": {
+        "cast_power": 6.0,
+        "creator_power": 5.0,
+        "ip_power": 2.0,
+        "platform_strategy": 9.0,
+        "pre_buzz": 3.8,
+        "genre_market_fit": 7.0
+      },
+      "cast_auto": {
+        "score": null,
+        "reason": "all actors missing: ['박보영', '김성철', '이현욱', '김희원', '문정희', '이광수']"
+      },
+      "creator_auto": {
+        "director": null,
+        "writer": null,
+        "score": 0.0,
+        "director_rsi": 0.0,
+        "writer_rsi": 0.0
+      },
+      "original_manual_scores": {
+        "cast": 6.0,
+        "creator": 5.0,
+        "ip": 2.0,
+        "platform": 9.0,
+        "pre_buzz": null,
+        "genre": 7.0
+      }
+    },
+    {
+      "title": "유미의 세포들3",
+      "platform": "TVING→tvN",
+      "release_date": "2026.04.13",
+      "combined": 53.8,
+      "first_ep": 55.1,
+      "avg": 53.9,
+      "rsi_victory": 51.5,
+      "verdict": "❓ 다크호스",
+      "axis_scores": {
+        "cast_power": 5.2,
+        "creator_power": 2.3,
+        "ip_power": 9.0,
+        "platform_strategy": 7.0,
+        "pre_buzz": 5.14,
+        "genre_market_fit": 6.0
+      },
+      "cast_auto": {
+        "score": 5.2,
+        "avg_rsi": 0.519,
+        "max_rsi": 0.519,
+        "n_actors": 1,
+        "n_missing": 3,
+        "missing": [
+          "김재원",
+          "전석호",
+          "최다니엘"
+        ],
+        "individual": [
+          {
+            "name": "김고은",
+            "rsi": 0.519,
+            "rsgi": 0.68,
+            "n_tv": 6,
+            "n_ott": 0
+          }
+        ]
+      },
+      "creator_auto": {
+        "director": {
+          "name": "이상엽",
+          "rsi": 0.0,
+          "n_credits": 0
+        },
+        "writer": {
+          "name": "송재정",
+          "rsi": 0.451,
+          "n_credits": 3
+        },
+        "score": 2.3,
+        "director_rsi": 0.0,
+        "writer_rsi": 0.451
+      },
+      "original_manual_scores": {
+        "cast": 7.0,
+        "creator": 7.0,
+        "ip": 9.0,
+        "platform": 7.0,
+        "pre_buzz": null,
+        "genre": 6.0
+      }
+    },
+    {
+      "title": "허수아비",
+      "platform": "ENA+GenieTV",
+      "release_date": "2026.04.20",
+      "combined": 50.4,
+      "first_ep": 47.9,
+      "avg": 51.7,
+      "rsi_victory": 50.7,
+      "verdict": "❓ 다크호스",
+      "axis_scores": {
+        "cast_power": 6.9,
+        "creator_power": 5.0,
+        "ip_power": 3.0,
+        "platform_strategy": 4.0,
+        "pre_buzz": 3.49,
+        "genre_market_fit": 7.0
+      },
+      "cast_auto": {
+        "score": 6.9,
+        "avg_rsi": 0.663,
+        "max_rsi": 0.816,
+        "n_actors": 4,
+        "n_missing": 0,
+        "missing": [],
+        "individual": [
+          {
+            "name": "박해수",
+            "rsi": 0.816,
+            "rsgi": 4.98,
+            "n_tv": 6,
+            "n_ott": 0
+          },
+          {
+            "name": "이희준",
+            "rsi": 0.64,
+            "rsgi": 2.42,
+            "n_tv": 11,
+            "n_ott": 0
+          },
+          {
+            "name": "진서연",
+            "rsi": 0.484,
+            "rsgi": 2.57,
+            "n_tv": 5,
+            "n_ott": 0
+          },
+          {
+            "name": "진선규",
+            "rsi": 0.712,
+            "rsgi": 3.15,
+            "n_tv": 14,
+            "n_ott": 0
+          }
+        ]
+      },
+      "creator_auto": {
+        "director": null,
+        "writer": null,
+        "score": 0.0,
+        "director_rsi": 0.0,
+        "writer_rsi": 0.0
+      },
+      "original_manual_scores": {
+        "cast": 6.0,
+        "creator": 5.0,
+        "ip": 3.0,
+        "platform": 4.0,
+        "pre_buzz": null,
+        "genre": 7.0
+      }
+    },
+    {
+      "title": "은밀한 감사",
+      "platform": "tvN+TVING",
+      "release_date": null,
+      "combined": 49.0,
+      "first_ep": 47.9,
+      "avg": 48.7,
+      "rsi_victory": 51.3,
+      "verdict": "❓ 다크호스",
+      "axis_scores": {
+        "cast_power": 5.5,
+        "creator_power": 6.0,
+        "ip_power": 2.0,
+        "platform_strategy": 6.0,
+        "pre_buzz": 4.0,
+        "genre_market_fit": 5.0
+      },
+      "cast_auto": {
+        "score": 5.5,
+        "avg_rsi": 0.526,
+        "max_rsi": 0.72,
+        "n_actors": 3,
+        "n_missing": 0,
+        "missing": [],
+        "individual": [
+          {
+            "name": "신혜선",
+            "rsi": 0.72,
+            "rsgi": 5.3,
+            "n_tv": 16,
+            "n_ott": 0
+          },
+          {
+            "name": "공명",
+            "rsi": 0.401,
+            "rsgi": -0.38,
+            "n_tv": 9,
+            "n_ott": 0
+          },
+          {
+            "name": "김재욱",
+            "rsi": 0.458,
+            "rsgi": 0.02,
+            "n_tv": 7,
+            "n_ott": 0
+          }
+        ]
+      },
+      "creator_auto": {
+        "director": null,
+        "writer": null,
+        "score": 0.0,
+        "director_rsi": 0.0,
+        "writer_rsi": 0.0
+      },
+      "original_manual_scores": {
+        "cast": 7.0,
+        "creator": 6.0,
+        "ip": 2.0,
+        "platform": 6.0,
+        "pre_buzz": null,
+        "genre": 5.0
+      }
+    },
+    {
+      "title": "기리고",
+      "platform": "Netflix",
+      "release_date": "2026.04.24",
+      "combined": 44.9,
+      "first_ep": 44.7,
+      "avg": 44.3,
+      "rsi_victory": 46.7,
+      "verdict": "📉 난항 예상",
+      "axis_scores": {
+        "cast_power": 4.8,
+        "creator_power": 3.0,
+        "ip_power": 2.0,
+        "platform_strategy": 10.0,
+        "pre_buzz": 2.43,
+        "genre_market_fit": 6.0
+      },
+      "cast_auto": {
+        "score": 4.8,
+        "avg_rsi": 0.446,
+        "max_rsi": 1.0,
+        "n_actors": 4,
+        "n_missing": 0,
+        "missing": [],
+        "individual": [
+          {
+            "name": "노정의",
+            "rsi": 0.162,
+            "rsgi": -0.02,
+            "n_tv": 11,
+            "n_ott": 0
+          },
+          {
+            "name": "이우제",
+            "rsi": 0.621,
+            "rsgi": 1.95,
+            "n_tv": 5,
+            "n_ott": 0
+          },
+          {
+            "name": "박예은",
+            "rsi": 0.0,
+            "rsgi": 0.0,
+            "n_tv": 0,
+            "n_ott": 0
+          },
+          {
+            "name": "임형준",
+            "rsi": 1.0,
+            "rsgi": 4.39,
+            "n_tv": 5,
+            "n_ott": 0
+          }
+        ]
+      },
+      "creator_auto": {
+        "director": null,
+        "writer": null,
+        "score": 0.0,
+        "director_rsi": 0.0,
+        "writer_rsi": 0.0
+      },
+      "original_manual_scores": {
+        "cast": 3.0,
+        "creator": 3.0,
+        "ip": 2.0,
+        "platform": 10.0,
+        "pre_buzz": null,
+        "genre": 6.0
+      }
+    },
+    {
+      "title": "로맨스의 절댓값",
+      "platform": null,
+      "release_date": null,
+      "combined": 37.2,
+      "first_ep": 30.8,
+      "avg": 39.7,
+      "rsi_victory": 40.3,
+      "verdict": "📉 난항 예상",
+      "axis_scores": {
+        "cast_power": 5,
+        "creator_power": 5,
+        "ip_power": 2,
+        "platform_strategy": 5,
+        "pre_buzz": 0,
+        "genre_market_fit": 5
+      },
+      "cast_auto": {
+        "score": null,
+        "reason": "all actors missing: ['여의주', '김향기', '가우수', '차학연', '노다주', '김재현', '정기전', '손정혁', '윤동주', '김동규']"
+      },
+      "creator_auto": {
+        "director": null,
+        "writer": null,
+        "score": 0.0,
+        "director_rsi": 0.0,
+        "writer_rsi": 0.0
+      },
+      "original_manual_scores": {
+        "cast": 0.0,
+        "creator": 0.0,
+        "ip": 0.0,
+        "platform": 0.0,
+        "pre_buzz": null,
+        "genre": 0.0
+      }
+    }
+  ]
+}

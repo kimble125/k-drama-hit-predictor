@@ -1,0 +1,191 @@
+{
+  "generated_at": "2026-04-29T23:36:40",
+  "by_drama": {
+    "21세기 대군부인": {
+      "data_quality": {
+        "episodes": "not_in_any_source",
+        "has_ip": "not_in_any_source"
+      },
+      "field_sources": {
+        "lead_actors": "wikipedia",
+        "director": "wikipedia",
+        "writer": "wikipedia",
+        "channel": "wikipedia",
+        "release_date": "wikipedia"
+      },
+      "sources_attempted": [
+        "wikipedia",
+        "namuwiki"
+      ],
+      "cast_role_breakdown": {}
+    },
+    "유미의 세포들3": {
+      "data_quality": {
+        "lead_actors": "not_in_any_source",
+        "director": "not_in_any_source",
+        "writer": "not_in_any_source",
+        "channel": "not_in_any_source",
+        "release_date": "not_in_any_source",
+        "episodes": "not_in_any_source",
+        "has_ip": "not_in_any_source"
+      },
+      "field_sources": {},
+      "sources_attempted": [],
+      "cast_role_breakdown": null
+    },
+    "모두가 자신의 무가치함과 싸우고 있다": {
+      "data_quality": {
+        "release_date": "not_in_any_source",
+        "episodes": "not_in_any_source",
+        "has_ip": "not_in_any_source"
+      },
+      "field_sources": {
+        "lead_actors": "wikipedia",
+        "director": "wikipedia",
+        "writer": "wikipedia",
+        "channel": "wikipedia"
+      },
+      "sources_attempted": [
+        "wikipedia",
+        "namuwiki"
+      ],
+      "cast_role_breakdown": {}
+    },
+    "허수아비": {
+      "data_quality": {
+        "lead_actors": "not_in_any_source",
+        "director": "not_in_any_source",
+        "writer": "not_in_any_source",
+        "channel": "not_in_any_source",
+        "release_date": "not_in_any_source",
+        "episodes": "not_in_any_source",
+        "has_ip": "not_in_any_source"
+      },
+      "field_sources": {},
+      "sources_attempted": [
+        "wikipedia",
+        "namuwiki"
+      ],
+      "cast_role_breakdown": {}
+    },
+    "오늘도 매진했습니다": {
+      "data_quality": {
+        "episodes": "not_in_any_source",
+        "has_ip": "not_in_any_source"
+      },
+      "field_sources": {
+        "lead_actors": "wikipedia",
+        "director": "wikipedia",
+        "writer": "wikipedia",
+        "channel": "wikipedia",
+        "release_date": "wikipedia"
+      },
+      "sources_attempted": [
+        "wikipedia",
+        "namuwiki"
+      ],
+      "cast_role_breakdown": {}
+    },
+    "기리고": {
+      "data_quality": {
+        "lead_actors": "not_in_any_source",
+        "director": "not_in_any_source",
+        "episodes": "not_in_any_source"
+      },
+      "field_sources": {
+        "writer": "wikipedia",
+        "channel": "wikipedia",
+        "release_date": "wikipedia",
+        "has_ip": "wikipedia"
+      },
+      "sources_attempted": [
+        "wikipedia",
+        "namuwiki"
+      ],
+      "cast_role_breakdown": {}
+    },
+    "은밀한 감사": {
+      "data_quality": {
+        "release_date": "not_in_any_source",
+        "episodes": "not_in_any_source",
+        "has_ip": "not_in_any_source"
+      },
+      "field_sources": {
+        "lead_actors": "wikipedia",
+        "director": "wikipedia",
+        "writer": "wikipedia",
+        "channel": "wikipedia"
+      },
+      "sources_attempted": [
+        "wikipedia",
+        "namuwiki"
+      ],
+      "cast_role_breakdown": {}
+    },
+    "골드랜드": {
+      "data_quality": {
+        "episodes": "not_in_any_source"
+      },
+      "field_sources": {
+        "lead_actors": "wikipedia",
+        "director": "wikipedia",
+        "writer": "wikipedia",
+        "channel": "wikipedia",
+        "release_date": "wikipedia",
+        "has_ip": "wikipedia"
+      },
+      "sources_attempted": [
+        "wikipedia",
+        "namuwiki"
+      ],
+      "cast_role_breakdown": {}
+    },
+    "로맨스의 절댓값": {
+      "data_quality": {
+        "director": "not_in_any_source",
+        "writer": "not_in_any_source",
+        "release_date": "not_in_any_source",
+        "episodes": "not_in_any_source"
+      },
+      "field_sources": {
+        "lead_actors": "namuwiki",
+        "channel": "wikipedia",
+        "has_ip": "wikipedia"
+      },
+      "sources_attempted": [
+        "wikipedia",
+        "namuwiki"
+      ],
+      "cast_role_breakdown": {
+        "lead": [
+          "여의주",
+          "김향기",
+          "가우수",
+          "차학연",
+          "노다주",
+          "김재현",
+          "정기전",
+          "손정혁",
+          "윤동주",
+          "김동규"
+        ],
+        "supporting": [
+          "최고야",
+          "김소희",
+          "제니",
+          "김단지",
+          "장재영",
+          "김영재",
+          "은하수",
+          "노주은",
+          "최지아",
+          "윤혜림"
+        ]
+      }
+    }
+  },
+  "attribution": {
+    "wikipedia": "위키백과 (CC BY-SA 4.0)",
+    "namuwiki": "나무위키 (CC BY-NC-SA 2.0 KR) — 비상업적 이용 허용, 출처 명시"
+  }
+}
