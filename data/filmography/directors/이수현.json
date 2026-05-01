@@ -1,0 +1,73 @@
+{
+  "name": "이수현",
+  "primary_role": "director",
+  "award_count_5y": 0,
+  "sns_followers": null,
+  "credits": [
+    {
+      "drama_title": "은밀한 감사",
+      "year": 2026,
+      "role": "director",
+      "channel": "tvN",
+      "day_slot": "토일",
+      "time_slot": "21:10",
+      "avg_rating": null,
+      "first_ep_rating": null,
+      "max_rating": null,
+      "is_lead": true,
+      "notes": "manually_created|현재 방영 중"
+    },
+    {
+      "drama_title": "그놈은 흑염룡",
+      "year": 2025,
+      "role": "director",
+      "channel": "tvN",
+      "day_slot": "월화",
+      "time_slot": "22:00",
+      "avg_rating": 3.7,
+      "first_ep_rating": 3.5,
+      "max_rating": 4.5,
+      "is_lead": true,
+      "notes": "manually_created|전국 가구 기준"
+    },
+    {
+      "drama_title": "이로운 사기",
+      "year": 2023,
+      "role": "director",
+      "channel": "tvN",
+      "day_slot": "월화",
+      "time_slot": "22:00",
+      "avg_rating": 3.7,
+      "first_ep_rating": 4.6,
+      "max_rating": 4.6,
+      "is_lead": true,
+      "notes": "manually_created|극본 한우주"
+    },
+    {
+      "drama_title": "별똥별",
+      "year": 2022,
+      "role": "director",
+      "channel": "tvN",
+      "day_slot": "금토",
+      "time_slot": "21:10",
+      "avg_rating": 1.5,
+      "first_ep_rating": 1.6,
+      "max_rating": 1.6,
+      "is_lead": true,
+      "notes": "manually_created|해외 인기 높았으나 국내 저조"
+    },
+    {
+      "drama_title": "그 남자의 기억법",
+      "year": 2019,
+      "role": "director",
+      "channel": "tvN",
+      "day_slot": "월화",
+      "time_slot": "21:30",
+      "avg_rating": null,
+      "first_ep_rating": null,
+      "max_rating": null,
+      "is_lead": true,
+      "notes": "manually_created|공동 연출"
+    }
+  ]
+}

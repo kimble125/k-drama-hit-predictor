@@ -1,0 +1,86 @@
+{
+  "name": "박보영",
+  "primary_role": "actor",
+  "award_count_5y": 0,
+  "sns_followers": null,
+  "credits": [
+    {
+      "drama_title": "골드랜드",
+      "year": 2026,
+      "role": "actor",
+      "channel": "Disney+",
+      "day_slot": null,
+      "time_slot": null,
+      "avg_rating": null,
+      "first_ep_rating": null,
+      "max_rating": null,
+      "is_lead": true,
+      "notes": "manually_created|현재 방영 중"
+    },
+    {
+      "drama_title": "미지의 서울",
+      "year": 2025,
+      "role": "actor",
+      "channel": "Disney+",
+      "day_slot": null,
+      "time_slot": null,
+      "avg_rating": null,
+      "first_ep_rating": null,
+      "max_rating": null,
+      "is_lead": true,
+      "notes": "manually_created|1인 2역|OTT"
+    },
+    {
+      "drama_title": "정신병동에도 아침이 와요",
+      "year": 2023,
+      "role": "actor",
+      "channel": "Netflix",
+      "day_slot": null,
+      "time_slot": null,
+      "avg_rating": null,
+      "first_ep_rating": null,
+      "max_rating": null,
+      "is_lead": true,
+      "notes": "manually_created|Netflix 오리지널|OTT"
+    },
+    {
+      "drama_title": "어느 날 우리집 현관으로 멸망이 들어왔다",
+      "year": 2021,
+      "role": "actor",
+      "channel": "tvN",
+      "day_slot": "월화",
+      "time_slot": "21:30",
+      "avg_rating": 3.2,
+      "first_ep_rating": 3.7,
+      "max_rating": 4.7,
+      "is_lead": true,
+      "notes": "manually_created"
+    },
+    {
+      "drama_title": "어비스",
+      "year": 2019,
+      "role": "actor",
+      "channel": "tvN",
+      "day_slot": "월화",
+      "time_slot": "21:30",
+      "avg_rating": 3.4,
+      "first_ep_rating": 4.7,
+      "max_rating": 5.2,
+      "is_lead": true,
+      "notes": "manually_created"
+    },
+    {
+      "drama_title": "힘쎈여자 도봉순",
+      "year": 2017,
+      "role": "actor",
+      "channel": "JTBC",
+      "day_slot": "금토",
+      "time_slot": "23:00",
+      "avg_rating": 6.5,
+      "first_ep_rating": 3.8,
+      "max_rating": 9.7,
+      "is_lead": true,
+      "notes": "manually_created|JTBC 역대 최고 시청률 당시 기록"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "name": "김희원",
+  "primary_role": "actor",
+  "award_count_5y": 0,
+  "sns_followers": null,
+  "credits": [
+    {
+      "drama_title": "골드랜드",
+      "year": 2026,
+      "role": "actor",
+      "channel": "Disney+",
+      "day_slot": null,
+      "time_slot": null,
+      "avg_rating": null,
+      "first_ep_rating": null,
+      "max_rating": null,
+      "is_lead": true,
+      "notes": "manually_created|현재 방영 중"
+    },
+    {
+      "drama_title": "무빙",
+      "year": 2023,
+      "role": "actor",
+      "channel": "Disney+",
+      "day_slot": null,
+      "time_slot": null,
+      "avg_rating": null,
+      "first_ep_rating": null,
+      "max_rating": null,
+      "is_lead": false,
+      "notes": "manually_created|OTT|조연"
+    },
+    {
+      "drama_title": "힙하게",
+      "year": 2023,
+      "role": "actor",
+      "channel": "JTBC",
+      "day_slot": "토일",
+      "time_slot": "22:30",
+      "avg_rating": 1.5,
+      "first_ep_rating": 1.8,
+      "max_rating": 2.5,
+      "is_lead": false,
+      "notes": "manually_created|조연"
+    },
+    {
+      "drama_title": "사이코지만 괜찮아",
+      "year": 2020,
+      "role": "actor",
+      "channel": "tvN",
+      "day_slot": "토일",
+      "time_slot": "21:00",
+      "avg_rating": 9.5,
+      "first_ep_rating": 7.0,
+      "max_rating": 13.5,
+      "is_lead": false,
+      "notes": "manually_created|조연|김수현·서예지 주연작"
+    },
+    {
+      "drama_title": "이번 주 아내가 바람을 핍니다",
+      "year": 2016,
+      "role": "actor",
+      "channel": "JTBC",
+      "day_slot": "금토",
+      "time_slot": "23:00",
+      "avg_rating": 3.5,
+      "first_ep_rating": 2.2,
+      "max_rating": 5.2,
+      "is_lead": false,
+      "notes": "manually_created|조연"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "name": "이현욱",
+  "primary_role": "actor",
+  "award_count_5y": 0,
+  "sns_followers": null,
+  "credits": [
+    {
+      "drama_title": "골드랜드",
+      "year": 2026,
+      "role": "actor",
+      "channel": "Disney+",
+      "day_slot": null,
+      "time_slot": null,
+      "avg_rating": null,
+      "first_ep_rating": null,
+      "max_rating": null,
+      "is_lead": true,
+      "notes": "manually_created|현재 방영 중"
+    },
+    {
+      "drama_title": "도적: 칼의 소리",
+      "year": 2023,
+      "role": "actor",
+      "channel": "Netflix",
+      "day_slot": null,
+      "time_slot": null,
+      "avg_rating": null,
+      "first_ep_rating": null,
+      "max_rating": null,
+      "is_lead": true,
+      "notes": "manually_created|OTT"
+    },
+    {
+      "drama_title": "마인",
+      "year": 2021,
+      "role": "actor",
+      "channel": "tvN",
+      "day_slot": "토일",
+      "time_slot": "21:10",
+      "avg_rating": 4.2,
+      "first_ep_rating": 3.6,
+      "max_rating": 6.3,
+      "is_lead": false,
+      "notes": "manually_created|조연"
+    },
+    {
+      "drama_title": "타인은 지옥이다",
+      "year": 2019,
+      "role": "actor",
+      "channel": "OCN",
+      "day_slot": "토일",
+      "time_slot": "22:30",
+      "avg_rating": 3.2,
+      "first_ep_rating": 3.5,
+      "max_rating": 4.8,
+      "is_lead": false,
+      "notes": "manually_created|조연"
+    }
+  ]
+}

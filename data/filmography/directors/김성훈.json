@@ -1,0 +1,34 @@
+{
+  "name": "김성훈",
+  "primary_role": "director",
+  "award_count_5y": 0,
+  "sns_followers": null,
+  "credits": [
+    {
+      "drama_title": "골드랜드",
+      "year": 2026,
+      "role": "director",
+      "channel": "Disney+",
+      "day_slot": null,
+      "time_slot": null,
+      "avg_rating": null,
+      "first_ep_rating": null,
+      "max_rating": null,
+      "is_lead": true,
+      "notes": "manually_created|현재 방영 중|OTT"
+    },
+    {
+      "drama_title": "수사반장 1958",
+      "year": 2024,
+      "role": "director",
+      "channel": "MBC",
+      "day_slot": "금토",
+      "time_slot": "21:50",
+      "avg_rating": 10.3,
+      "first_ep_rating": 10.1,
+      "max_rating": 12.9,
+      "is_lead": true,
+      "notes": "manually_created|MBC 금토 역대 첫방 최고 시청률|이제훈 주연"
+    }
+  ]
+}
