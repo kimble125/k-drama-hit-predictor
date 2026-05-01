@@ -1,0 +1,73 @@
+{
+  "name": "이광수",
+  "primary_role": "actor",
+  "award_count_5y": 0,
+  "sns_followers": null,
+  "credits": [
+    {
+      "drama_title": "골드랜드",
+      "year": 2026,
+      "role": "actor",
+      "channel": "Disney+",
+      "day_slot": null,
+      "time_slot": null,
+      "avg_rating": null,
+      "first_ep_rating": null,
+      "max_rating": null,
+      "is_lead": true,
+      "notes": "manually_created|현재 방영 중"
+    },
+    {
+      "drama_title": "조각도시",
+      "year": 2025,
+      "role": "actor",
+      "channel": "Disney+",
+      "day_slot": null,
+      "time_slot": null,
+      "avg_rating": null,
+      "first_ep_rating": null,
+      "max_rating": null,
+      "is_lead": true,
+      "notes": "manually_created|OTT"
+    },
+    {
+      "drama_title": "악연",
+      "year": 2023,
+      "role": "actor",
+      "channel": "Netflix",
+      "day_slot": null,
+      "time_slot": null,
+      "avg_rating": null,
+      "first_ep_rating": null,
+      "max_rating": null,
+      "is_lead": false,
+      "notes": "manually_created|OTT|조연"
+    },
+    {
+      "drama_title": "살인자의 쇼핑목록",
+      "year": 2022,
+      "role": "actor",
+      "channel": "tvN",
+      "day_slot": "수목",
+      "time_slot": "22:30",
+      "avg_rating": 1.5,
+      "first_ep_rating": 2.0,
+      "max_rating": 2.5,
+      "is_lead": false,
+      "notes": "manually_created|조연|4년 공백 후 복귀작"
+    },
+    {
+      "drama_title": "디어 마이 프렌즈",
+      "year": 2016,
+      "role": "actor",
+      "channel": "tvN",
+      "day_slot": "금토",
+      "time_slot": "21:10",
+      "avg_rating": 5.2,
+      "first_ep_rating": 5.4,
+      "max_rating": 6.9,
+      "is_lead": false,
+      "notes": "manually_created|조연"
+    }
+  ]
+}

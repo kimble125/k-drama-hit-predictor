@@ -1,0 +1,34 @@
+{
+  "name": "여은호",
+  "primary_role": "writer",
+  "award_count_5y": 0,
+  "sns_followers": null,
+  "credits": [
+    {
+      "drama_title": "은밀한 감사",
+      "year": 2026,
+      "role": "writer",
+      "channel": "tvN",
+      "day_slot": "토일",
+      "time_slot": "21:10",
+      "avg_rating": null,
+      "first_ep_rating": null,
+      "max_rating": null,
+      "is_lead": true,
+      "notes": "manually_created|현재 방영 중"
+    },
+    {
+      "drama_title": "일타 스캔들",
+      "year": 2023,
+      "role": "writer",
+      "channel": "tvN",
+      "day_slot": "토일",
+      "time_slot": "21:10",
+      "avg_rating": 17.0,
+      "first_ep_rating": 4.1,
+      "max_rating": 18.9,
+      "is_lead": true,
+      "notes": "manually_created|공동 집필(양희승 작가)|tvN 역대 6위 기록"
+    }
+  ]
+}

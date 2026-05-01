@@ -1,0 +1,34 @@
+{
+  "name": "이지현",
+  "primary_role": "writer",
+  "award_count_5y": 0,
+  "sns_followers": null,
+  "credits": [
+    {
+      "drama_title": "허수아비",
+      "year": 2026,
+      "role": "writer",
+      "channel": "ENA",
+      "day_slot": "월화",
+      "time_slot": "22:00",
+      "avg_rating": null,
+      "first_ep_rating": null,
+      "max_rating": null,
+      "is_lead": true,
+      "notes": "manually_created|현재 방영 중"
+    },
+    {
+      "drama_title": "모범택시",
+      "year": 2021,
+      "role": "writer",
+      "channel": "SBS",
+      "day_slot": "금토",
+      "time_slot": "22:00",
+      "avg_rating": 12.0,
+      "first_ep_rating": 10.3,
+      "max_rating": 18.0,
+      "is_lead": true,
+      "notes": "manually_created|박준우 감독과 재결합 작품|SBS 금토 시청률 대박"
+    }
+  ]
+}
