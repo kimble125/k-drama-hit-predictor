@@ -15,20 +15,20 @@
       "first_ep_rating": null,
       "max_rating": null,
       "is_lead": true,
-      "notes": "manually_created|현재 방영 중"
+      "notes": "manually_created|현재 방영 중|wiki_matched"
     },
     {
       "drama_title": "무빙",
       "year": 2023,
       "role": "actor",
       "channel": "Disney+",
-      "day_slot": null,
-      "time_slot": null,
+      "day_slot": "화일",
+      "time_slot": "10:00",
       "avg_rating": null,
       "first_ep_rating": null,
       "max_rating": null,
       "is_lead": false,
-      "notes": "manually_created|OTT|조연"
+      "notes": "manually_created|OTT|조연|wiki_matched"
     },
     {
       "drama_title": "힙하게",
@@ -41,7 +41,7 @@
       "first_ep_rating": 1.8,
       "max_rating": 2.5,
       "is_lead": false,
-      "notes": "manually_created|조연"
+      "notes": "manually_created|조연|wiki_matched"
     },
     {
       "drama_title": "사이코지만 괜찮아",
@@ -54,7 +54,7 @@
       "first_ep_rating": 7.0,
       "max_rating": 13.5,
       "is_lead": false,
-      "notes": "manually_created|조연|김수현·서예지 주연작"
+      "notes": "manually_created|조연|김수현·서예지 주연작|wiki_matched"
     },
     {
       "drama_title": "이번 주 아내가 바람을 핍니다",
@@ -67,7 +67,7 @@
       "first_ep_rating": 2.2,
       "max_rating": 5.2,
       "is_lead": false,
-      "notes": "manually_created|조연"
+      "notes": "manually_created|조연|wiki_matched"
     }
   ]
 }

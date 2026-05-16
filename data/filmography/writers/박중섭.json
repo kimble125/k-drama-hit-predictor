@@ -1,0 +1,23 @@
+{
+  "name": "박중섭",
+  "primary_role": "writer",
+  "award_count_5y": 0,
+  "sns_followers": null,
+  "credits": [
+    {
+      "drama_title": "기리고",
+      "year": 2026,
+      "role": "writer",
+      "channel": "Netflix",
+      "day_slot": null,
+      "time_slot": null,
+      "avg_rating": null,
+      "first_ep_rating": null,
+      "max_rating": null,
+      "is_lead": true,
+      "cast_role": null,
+      "role_weight": 1.0,
+      "notes": "tmdb_id=285838, job=Writer"
+    }
+  ]
+}

@@ -15,7 +15,7 @@
       "first_ep_rating": null,
       "max_rating": null,
       "is_lead": true,
-      "notes": "manually_created|현재 방영 중"
+      "notes": "manually_created|현재 방영 중|wiki_matched"
     },
     {
       "drama_title": "조각도시",
@@ -28,7 +28,7 @@
       "first_ep_rating": null,
       "max_rating": null,
       "is_lead": true,
-      "notes": "manually_created|OTT"
+      "notes": "manually_created|OTT|wiki_matched"
     },
     {
       "drama_title": "악연",
@@ -36,12 +36,12 @@
       "role": "actor",
       "channel": "Netflix",
       "day_slot": null,
-      "time_slot": null,
+      "time_slot": "16:00",
       "avg_rating": null,
       "first_ep_rating": null,
       "max_rating": null,
       "is_lead": false,
-      "notes": "manually_created|OTT|조연"
+      "notes": "manually_created|OTT|조연|wiki_matched"
     },
     {
       "drama_title": "살인자의 쇼핑목록",
@@ -54,7 +54,7 @@
       "first_ep_rating": 2.0,
       "max_rating": 2.5,
       "is_lead": false,
-      "notes": "manually_created|조연|4년 공백 후 복귀작"
+      "notes": "manually_created|조연|4년 공백 후 복귀작|wiki_matched"
     },
     {
       "drama_title": "디어 마이 프렌즈",
@@ -67,7 +67,7 @@
       "first_ep_rating": 5.4,
       "max_rating": 6.9,
       "is_lead": false,
-      "notes": "manually_created|조연"
+      "notes": "manually_created|조연|wiki_matched"
     }
   ]
 }

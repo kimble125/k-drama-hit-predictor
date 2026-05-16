@@ -15,7 +15,7 @@
       "first_ep_rating": null,
       "max_rating": null,
       "is_lead": true,
-      "notes": "manually_created|현재 방영 중"
+      "notes": "manually_created|현재 방영 중|wiki_matched"
     },
     {
       "drama_title": "그놈은 흑염룡",
@@ -28,7 +28,7 @@
       "first_ep_rating": 3.5,
       "max_rating": 4.5,
       "is_lead": true,
-      "notes": "manually_created|전국 가구 기준"
+      "notes": "manually_created|전국 가구 기준|wiki_matched"
     },
     {
       "drama_title": "이로운 사기",
@@ -41,7 +41,7 @@
       "first_ep_rating": 4.6,
       "max_rating": 4.6,
       "is_lead": true,
-      "notes": "manually_created|극본 한우주"
+      "notes": "manually_created|극본 한우주|wiki_matched"
     },
     {
       "drama_title": "별똥별",
@@ -54,7 +54,7 @@
       "first_ep_rating": 1.6,
       "max_rating": 1.6,
       "is_lead": true,
-      "notes": "manually_created|해외 인기 높았으나 국내 저조"
+      "notes": "manually_created|해외 인기 높았으나 국내 저조|wiki_matched"
     },
     {
       "drama_title": "그 남자의 기억법",
@@ -63,11 +63,11 @@
       "channel": "tvN",
       "day_slot": "월화",
       "time_slot": "21:30",
-      "avg_rating": null,
+      "avg_rating": 3.46,
       "first_ep_rating": null,
-      "max_rating": null,
+      "max_rating": 5.4,
       "is_lead": true,
-      "notes": "manually_created|공동 연출"
+      "notes": "manually_created|공동 연출|wiki_matched"
     }
   ]
 }

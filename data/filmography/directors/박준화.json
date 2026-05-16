@@ -11,11 +11,11 @@
       "channel": "MBC",
       "day_slot": null,
       "time_slot": "09:40",
-      "avg_rating": 9.5,
-      "first_ep_rating": null,
-      "max_rating": 11.3,
+      "avg_rating": 11.0,
+      "first_ep_rating": 10.9,
+      "max_rating": 11.1,
       "is_lead": true,
-      "notes": "tmdb_id=278573, job=Director"
+      "notes": "tmdb_id=278573, job=Director|nielsen_matched"
     },
     {
       "drama_title": "사랑은 외나무다리에서",

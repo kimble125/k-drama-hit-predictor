@@ -1,0 +1,53 @@
+{
+  "name": "배희영",
+  "primary_role": "director",
+  "award_count_5y": 0,
+  "sns_followers": null,
+  "credits": [
+    {
+      "drama_title": "21세기 대군부인",
+      "year": 2026,
+      "role": "director",
+      "channel": "MBC",
+      "day_slot": null,
+      "time_slot": "09:40",
+      "avg_rating": 11.0,
+      "first_ep_rating": 10.9,
+      "max_rating": 11.1,
+      "is_lead": true,
+      "cast_role": null,
+      "role_weight": 1.0,
+      "notes": "tmdb_id=278573, job=Director|nielsen_matched|wiki_matched"
+    },
+    {
+      "drama_title": "사랑은 외나무다리에서",
+      "year": 2024,
+      "role": "director",
+      "channel": "tvN",
+      "day_slot": null,
+      "time_slot": "09:20",
+      "avg_rating": 5.0,
+      "first_ep_rating": null,
+      "max_rating": 7.117,
+      "is_lead": true,
+      "cast_role": null,
+      "role_weight": 1.0,
+      "notes": "tmdb_id=244463, job=Director|wiki_matched"
+    },
+    {
+      "drama_title": "새벽 2시의 신데렐라",
+      "year": 2024,
+      "role": "director",
+      "channel": "쿠팡플레이",
+      "day_slot": null,
+      "time_slot": "09:20",
+      "avg_rating": null,
+      "first_ep_rating": null,
+      "max_rating": null,
+      "is_lead": true,
+      "cast_role": null,
+      "role_weight": 1.0,
+      "notes": "tmdb_id=233349, job=Director|wiki_matched"
+    }
+  ]
+}

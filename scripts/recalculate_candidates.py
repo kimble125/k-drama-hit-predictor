@@ -162,6 +162,31 @@ def main() -> None:
 
         result = calculate_triple_kpi(d.title, axis_scores)
         print(f"   → 종합 H-Score: {result.combined} {result.verdict}")
+
+        # verification 마커 — 미루님 설계 원칙: "사용자 본인의 확인 필요"
+        # 자동 수집으로 채우지 못한 인물(RSI=0 또는 TV 표본 3편 미만)을 식별해
+        # 결과에 플래그를 박는다. 무료 자동 수집의 본질적 한계를 시스템에 명시.
+        cast_unverified = [
+            ind["name"] for ind in (cast_info.get("individual") or [])
+            if (ind.get("n_tv") or 0) < 3 or (ind.get("rsi") or 0) == 0
+        ]
+        creator_unverified = []
+        if creator_info.get("director") and (creator_info["director"].get("rsi") or 0) == 0:
+            creator_unverified.append(f"감독:{creator_info['director']['name']}")
+        if creator_info.get("writer") and (creator_info["writer"].get("rsi") or 0) == 0:
+            creator_unverified.append(f"작가:{creator_info['writer']['name']}")
+        n_persons = max(len(cast_info.get("individual") or []) + 2, 1)  # cast + dir + writer
+        n_unverified = len(cast_unverified) + len(creator_unverified)
+        confidence = round((n_persons - n_unverified) / n_persons, 2)
+        verification = {
+            "needed": bool(cast_unverified or creator_unverified),
+            "cast_unverified": cast_unverified,
+            "creator_unverified": creator_unverified,
+            "confidence": confidence,
+        }
+        if verification["needed"]:
+            print(f"   ⚠️  사용자 확인 필요 (confidence={confidence}): "
+                  f"cast={cast_unverified} creator={creator_unverified}")
         print()
 
         results.append({
@@ -176,6 +201,7 @@ def main() -> None:
             "axis_scores": axis_scores,
             "cast_auto": cast_info,
             "creator_auto": creator_info,
+            "verification": verification,
             "original_manual_scores": {
                 "cast": d.cast_power, "creator": d.creator_power,
                 "ip": d.ip_power, "platform": d.platform_strategy,
@@ -205,11 +231,16 @@ def main() -> None:
     with csv_out_path.open("w", encoding="utf-8-sig", newline="") as f:
         w = _csv.writer(f)
         w.writerow(["rank", "title", "combined", "first_ep", "avg", "rsi_victory",
-                    "verdict", "cast_auto", "creator_auto", "platform", "release_date"])
+                    "verdict", "cast_auto", "creator_auto",
+                    "confidence", "verification_needed", "unverified_persons",
+                    "platform", "release_date"])
         for i, r in enumerate(results, 1):
+            v = r.get("verification") or {}
+            unver = "|".join((v.get("cast_unverified") or []) + (v.get("creator_unverified") or []))
             w.writerow([i, r["title"], r["combined"], r["first_ep"], r["avg"],
                         r["rsi_victory"], r["verdict"],
                         r["cast_auto"].get("score"), r["creator_auto"].get("score"),
+                        v.get("confidence"), v.get("needed"), unver,
                         r["platform"], r["release_date"]])
 
     print(f"\n💾 저장: {json_path.name}, {csv_out_path.name}")
