@@ -1,0 +1,73 @@
+{
+  "name": "박준우",
+  "primary_role": "director",
+  "award_count_5y": 0,
+  "sns_followers": null,
+  "credits": [
+    {
+      "drama_title": "허수아비",
+      "year": 2026,
+      "role": "director",
+      "channel": "ENA",
+      "day_slot": "월화",
+      "time_slot": "22:00",
+      "avg_rating": null,
+      "first_ep_rating": null,
+      "max_rating": null,
+      "is_lead": true,
+      "notes": "manually_created|현재 방영 중"
+    },
+    {
+      "drama_title": "메리 킬즈 피플",
+      "year": 2025,
+      "role": "director",
+      "channel": "MBC",
+      "day_slot": "금토",
+      "time_slot": "22:00",
+      "avg_rating": 1.5,
+      "first_ep_rating": 3.2,
+      "max_rating": 3.2,
+      "is_lead": true,
+      "notes": "manually_created|이보영·이민기 주연|1%대 종영"
+    },
+    {
+      "drama_title": "크래시",
+      "year": 2024,
+      "role": "director",
+      "channel": "ENA",
+      "day_slot": "월화",
+      "time_slot": "21:30",
+      "avg_rating": 3.0,
+      "first_ep_rating": 2.2,
+      "max_rating": 4.1,
+      "is_lead": true,
+      "notes": "manually_created"
+    },
+    {
+      "drama_title": "모범택시",
+      "year": 2021,
+      "role": "director",
+      "channel": "SBS",
+      "day_slot": "금토",
+      "time_slot": "22:00",
+      "avg_rating": 12.0,
+      "first_ep_rating": 10.3,
+      "max_rating": 18.0,
+      "is_lead": true,
+      "notes": "manually_created|이제훈·이솜 주연|SBS 역대 금토 4위"
+    },
+    {
+      "drama_title": "닥터 탐정",
+      "year": 2019,
+      "role": "director",
+      "channel": "SBS",
+      "day_slot": "수목",
+      "time_slot": "22:00",
+      "avg_rating": 5.8,
+      "first_ep_rating": null,
+      "max_rating": 7.1,
+      "is_lead": true,
+      "notes": "manually_created"
+    }
+  ]
+}

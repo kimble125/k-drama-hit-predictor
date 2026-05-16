@@ -1,0 +1,38 @@
+{
+  "name": "현지민",
+  "primary_role": "writer",
+  "award_count_5y": 0,
+  "sns_followers": null,
+  "credits": [
+    {
+      "drama_title": "신입사원 강회장",
+      "year": 2026,
+      "role": "writer",
+      "channel": "JTBC",
+      "day_slot": null,
+      "time_slot": "22:40",
+      "avg_rating": null,
+      "first_ep_rating": null,
+      "max_rating": null,
+      "is_lead": true,
+      "cast_role": null,
+      "role_weight": 1.0,
+      "notes": "tmdb_id=299365, job=Writer|wiki_matched"
+    },
+    {
+      "drama_title": "판도라: 조작된 낙원",
+      "year": 2023,
+      "role": "writer",
+      "channel": "tvN",
+      "day_slot": "일일",
+      "time_slot": "09:10",
+      "avg_rating": 4.1,
+      "first_ep_rating": null,
+      "max_rating": 6.024,
+      "is_lead": true,
+      "cast_role": null,
+      "role_weight": 1.0,
+      "notes": "tmdb_id=203344, job=Writer|wiki_matched"
+    }
+  ]
+}

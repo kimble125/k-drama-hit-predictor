@@ -1,0 +1,60 @@
+{
+  "name": "문정희",
+  "primary_role": "actor",
+  "award_count_5y": 0,
+  "sns_followers": null,
+  "credits": [
+    {
+      "drama_title": "골드랜드",
+      "year": 2026,
+      "role": "actor",
+      "channel": "Disney+",
+      "day_slot": null,
+      "time_slot": null,
+      "avg_rating": null,
+      "first_ep_rating": null,
+      "max_rating": null,
+      "is_lead": true,
+      "notes": "manually_created|현재 방영 중"
+    },
+    {
+      "drama_title": "The 8 Show",
+      "year": 2024,
+      "role": "actor",
+      "channel": "Netflix",
+      "day_slot": null,
+      "time_slot": null,
+      "avg_rating": null,
+      "first_ep_rating": null,
+      "max_rating": null,
+      "is_lead": true,
+      "notes": "manually_created|OTT"
+    },
+    {
+      "drama_title": "배가본드",
+      "year": 2019,
+      "role": "actor",
+      "channel": "SBS",
+      "day_slot": "금토",
+      "time_slot": "22:00",
+      "avg_rating": 8.9,
+      "first_ep_rating": 8.6,
+      "max_rating": 12.5,
+      "is_lead": false,
+      "notes": "manually_created|조연|이승기·배수지 주연"
+    },
+    {
+      "drama_title": "마마",
+      "year": 2014,
+      "role": "actor",
+      "channel": "MBC",
+      "day_slot": "수목",
+      "time_slot": "22:00",
+      "avg_rating": 14.0,
+      "first_ep_rating": 8.3,
+      "max_rating": 21.4,
+      "is_lead": true,
+      "notes": "manually_created|송윤아·문정희 투톱"
+    }
+  ]
+}

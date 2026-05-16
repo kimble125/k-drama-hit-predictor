@@ -1,0 +1,38 @@
+{
+  "name": "한태섭",
+  "primary_role": "director",
+  "award_count_5y": 0,
+  "sns_followers": null,
+  "credits": [
+    {
+      "drama_title": "멋진 신세계",
+      "year": 2026,
+      "role": "director",
+      "channel": "SBS",
+      "day_slot": null,
+      "time_slot": "09:50",
+      "avg_rating": 5.1,
+      "first_ep_rating": null,
+      "max_rating": 5.8,
+      "is_lead": true,
+      "cast_role": null,
+      "role_weight": 1.0,
+      "notes": "tmdb_id=303143, job=Director|wiki_matched"
+    },
+    {
+      "drama_title": "치얼업",
+      "year": 2022,
+      "role": "director",
+      "channel": "SBS",
+      "day_slot": null,
+      "time_slot": null,
+      "avg_rating": 2.38,
+      "first_ep_rating": null,
+      "max_rating": 3.9,
+      "is_lead": true,
+      "cast_role": null,
+      "role_weight": 1.0,
+      "notes": "tmdb_id=155229, job=Director|wiki_matched"
+    }
+  ]
+}

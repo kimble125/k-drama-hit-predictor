@@ -1,0 +1,68 @@
+{
+  "name": "조남형",
+  "primary_role": "director",
+  "award_count_5y": 0,
+  "sns_followers": null,
+  "credits": [
+    {
+      "drama_title": "취사병 전설이 되다",
+      "year": 2026,
+      "role": "director",
+      "channel": "tvN",
+      "day_slot": null,
+      "time_slot": "08:50",
+      "avg_rating": null,
+      "first_ep_rating": null,
+      "max_rating": null,
+      "is_lead": true,
+      "cast_role": null,
+      "role_weight": 1.0,
+      "notes": "tmdb_id=295509, job=Director|wiki_matched"
+    },
+    {
+      "drama_title": "구미호뎐1938",
+      "year": 2023,
+      "role": "director",
+      "channel": "tvN",
+      "day_slot": "일일",
+      "time_slot": "09:20",
+      "avg_rating": 6.7,
+      "first_ep_rating": null,
+      "max_rating": 9.102,
+      "is_lead": true,
+      "cast_role": null,
+      "role_weight": 1.0,
+      "notes": "tmdb_id=201019, job=Director|wiki_matched"
+    },
+    {
+      "drama_title": "우월한 하루",
+      "year": 2022,
+      "role": "director",
+      "channel": "OCN",
+      "day_slot": null,
+      "time_slot": "10:30",
+      "avg_rating": 0.94,
+      "first_ep_rating": null,
+      "max_rating": 1.2,
+      "is_lead": true,
+      "cast_role": null,
+      "role_weight": 1.0,
+      "notes": "tmdb_id=138481, job=Director|wiki_matched"
+    },
+    {
+      "drama_title": "구미호뎐",
+      "year": 2020,
+      "role": "director",
+      "channel": "tvN",
+      "day_slot": "일일",
+      "time_slot": "09:25",
+      "avg_rating": 5.5,
+      "first_ep_rating": null,
+      "max_rating": 6.479,
+      "is_lead": true,
+      "cast_role": null,
+      "role_weight": 1.0,
+      "notes": "tmdb_id=108284, job=Director|wiki_matched"
+    }
+  ]
+}

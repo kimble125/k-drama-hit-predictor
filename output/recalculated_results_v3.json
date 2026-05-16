@@ -205,38 +205,80 @@
       }
     },
     {
-      "title": "골드랜드",
-      "platform": "Disney+",
-      "release_date": "2026.04.29",
-      "combined": 54.4,
-      "first_ep": 53.7,
-      "avg": 54.1,
-      "rsi_victory": 56.1,
-      "verdict": "❓ 다크호스",
+      "title": "허수아비",
+      "platform": "ENA+GenieTV",
+      "release_date": "2026.04.20",
+      "combined": 56.8,
+      "first_ep": 51.4,
+      "avg": 59.2,
+      "rsi_victory": 58.7,
+      "verdict": "⚡ 승부처",
       "axis_scores": {
-        "cast_power": 6.0,
-        "creator_power": 5.0,
-        "ip_power": 2.0,
-        "platform_strategy": 9.0,
-        "pre_buzz": 3.8,
+        "cast_power": 6.9,
+        "creator_power": 8.0,
+        "ip_power": 3.0,
+        "platform_strategy": 4.0,
+        "pre_buzz": 3.49,
         "genre_market_fit": 7.0
       },
       "cast_auto": {
-        "score": null,
-        "reason": "all actors missing: ['박보영', '김성철', '이현욱', '김희원', '문정희', '이광수']"
+        "score": 6.9,
+        "avg_rsi": 0.663,
+        "max_rsi": 0.816,
+        "n_actors": 4,
+        "n_missing": 0,
+        "missing": [],
+        "individual": [
+          {
+            "name": "박해수",
+            "rsi": 0.816,
+            "rsgi": 4.98,
+            "n_tv": 6,
+            "n_ott": 0
+          },
+          {
+            "name": "이희준",
+            "rsi": 0.64,
+            "rsgi": 2.42,
+            "n_tv": 11,
+            "n_ott": 0
+          },
+          {
+            "name": "진서연",
+            "rsi": 0.484,
+            "rsgi": 2.57,
+            "n_tv": 5,
+            "n_ott": 0
+          },
+          {
+            "name": "진선규",
+            "rsi": 0.712,
+            "rsgi": 3.15,
+            "n_tv": 14,
+            "n_ott": 0
+          }
+        ]
       },
       "creator_auto": {
-        "director": null,
-        "writer": null,
-        "score": 0.0,
-        "director_rsi": 0.0,
-        "writer_rsi": 0.0
+        "director": {
+          "name": "박준우",
+          "rsi": 0.592,
+          "n_credits": 4
+        },
+        "writer": {
+          "name": "이지현",
+          "rsi": 1.0,
+          "n_credits": 1
+        },
+        "score": 8.0,
+        "director_rsi": 0.592,
+        "writer_rsi": 1.0
       },
       "original_manual_scores": {
         "cast": 6.0,
         "creator": 5.0,
-        "ip": 2.0,
-        "platform": 9.0,
+        "ip": 3.0,
+        "platform": 4.0,
         "pre_buzz": null,
         "genre": 7.0
       }
@@ -304,72 +346,94 @@
       }
     },
     {
-      "title": "허수아비",
-      "platform": "ENA+GenieTV",
-      "release_date": "2026.04.20",
-      "combined": 50.4,
-      "first_ep": 47.9,
-      "avg": 51.7,
-      "rsi_victory": 50.7,
+      "title": "골드랜드",
+      "platform": "Disney+",
+      "release_date": "2026.04.29",
+      "combined": 52.6,
+      "first_ep": 51.7,
+      "avg": 52.6,
+      "rsi_victory": 53.7,
       "verdict": "❓ 다크호스",
       "axis_scores": {
-        "cast_power": 6.9,
+        "cast_power": 5.1,
         "creator_power": 5.0,
-        "ip_power": 3.0,
-        "platform_strategy": 4.0,
-        "pre_buzz": 3.49,
+        "ip_power": 2.0,
+        "platform_strategy": 9.0,
+        "pre_buzz": 3.8,
         "genre_market_fit": 7.0
       },
       "cast_auto": {
-        "score": 6.9,
-        "avg_rsi": 0.663,
-        "max_rsi": 0.816,
-        "n_actors": 4,
+        "score": 5.1,
+        "avg_rsi": 0.461,
+        "max_rsi": 1.0,
+        "n_actors": 6,
         "n_missing": 0,
         "missing": [],
         "individual": [
           {
-            "name": "박해수",
-            "rsi": 0.816,
-            "rsgi": 4.98,
-            "n_tv": 6,
+            "name": "박보영",
+            "rsi": 0.635,
+            "rsgi": 0.52,
+            "n_tv": 3,
             "n_ott": 0
           },
           {
-            "name": "이희준",
-            "rsi": 0.64,
-            "rsgi": 2.42,
-            "n_tv": 11,
+            "name": "김성철",
+            "rsi": 0.622,
+            "rsgi": 0.41,
+            "n_tv": 3,
             "n_ott": 0
           },
           {
-            "name": "진서연",
-            "rsi": 0.484,
-            "rsgi": 2.57,
-            "n_tv": 5,
+            "name": "이현욱",
+            "rsi": 0.0,
+            "rsgi": -2.03,
+            "n_tv": 2,
             "n_ott": 0
           },
           {
-            "name": "진선규",
-            "rsi": 0.712,
-            "rsgi": 3.15,
-            "n_tv": 14,
+            "name": "김희원",
+            "rsi": 0.331,
+            "rsgi": -0.24,
+            "n_tv": 3,
+            "n_ott": 0
+          },
+          {
+            "name": "문정희",
+            "rsi": 1.0,
+            "rsgi": 3.65,
+            "n_tv": 2,
+            "n_ott": 0
+          },
+          {
+            "name": "이광수",
+            "rsi": 0.177,
+            "rsgi": -1.54,
+            "n_tv": 2,
             "n_ott": 0
           }
         ]
       },
       "creator_auto": {
-        "director": null,
-        "writer": null,
-        "score": 0.0,
-        "director_rsi": 0.0,
+        "director": {
+          "name": "김성훈",
+          "rsi": 1.0,
+          "n_credits": 1
+        },
+        "writer": {
+          "name": "황조윤",
+          "rsi": 0.0,
+          "n_credits": 1
+        },
+        "score": 5.0,
+        "director_rsi": 1.0,
         "writer_rsi": 0.0
       },
       "original_manual_scores": {
         "cast": 6.0,
         "creator": 5.0,
-        "ip": 3.0,
-        "platform": 4.0,
+        "ip": 2.0,
+        "platform": 9.0,
         "pre_buzz": null,
         "genre": 7.0
       }
@@ -378,14 +442,14 @@
       "title": "은밀한 감사",
       "platform": "tvN+TVING",
       "release_date": null,
-      "combined": 49.0,
-      "first_ep": 47.9,
-      "avg": 48.7,
-      "rsi_victory": 51.3,
+      "combined": 50.7,
+      "first_ep": 48.9,
+      "avg": 50.7,
+      "rsi_victory": 53.5,
       "verdict": "❓ 다크호스",
       "axis_scores": {
         "cast_power": 5.5,
-        "creator_power": 6.0,
+        "creator_power": 6.8,
         "ip_power": 2.0,
         "platform_strategy": 6.0,
         "pre_buzz": 4.0,
@@ -423,11 +487,19 @@
         ]
       },
       "creator_auto": {
-        "director": null,
-        "writer": null,
-        "score": 0.0,
-        "director_rsi": 0.0,
-        "writer_rsi": 0.0
+        "director": {
+          "name": "이수현",
+          "rsi": 0.355,
+          "n_credits": 3
+        },
+        "writer": {
+          "name": "여은호",
+          "rsi": 1.0,
+          "n_credits": 1
+        },
+        "score": 6.8,
+        "director_rsi": 0.355,
+        "writer_rsi": 1.0
       },
       "original_manual_scores": {
         "cast": 7.0,
