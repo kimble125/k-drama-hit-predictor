@@ -24,20 +24,13 @@
       + 4단 verdict (대박 / 중박 / 다크호스 / 난항)
 ```
 
-**실측 예시 (2026년 4월 K-드라마 8편):**
+**실측 예시 (2026년 4-6월 K-드라마 후보작 예측):**
 
-| 순위 | 드라마 | 종합 H | 전망 |
-|---|---|---|---|
-| 1 | 모두가 자신의 무가치함과 싸우고 있다 | 63.9 | ⚡ 승부처 |
-| 2 | 허수아비 | 61.1 | ⚡ 승부처 |
-| 3 | 오늘도 매진했습니다 | 60.8 | ⚡ 승부처 |
-| 4 | 골드랜드 | 60.1 | ⚡ 승부처 |
-| 5 | 유미의 세포들3 | 57.3 | ⚡ 승부처 |
-| 6 | 21세기 대군부인 | 54.6 | ❓ 다크호스 |
-| 7 | 은밀한 감사 | 48.1 | ❓ 다크호스 |
-| 8 | 기리고 | 44.5 | 📉 난항 예상 |
+자세한 분석 결과와 개발 히스토리는 아래의 문서를 참고하세요:
+- 📊 **7개 드라마 H-Score 분석 리포트**: [docs/seven_dramas_hscore_analysis.md](docs/seven_dramas_hscore_analysis.md)
+- 📝 **알고리즘 설계 및 개발 노트**: [DEVELOPMENT.md](DEVELOPMENT.md) (RSI 역할 가중치, 영화 Fallback, 크리에이터 연동 등 한계 돌파 이력)
 
-자세한 분석: [흥행 디코딩 #1 - 콘텐츠 블로그](https://forrest125.tistory.com/114) | [기술 해설 - IT 블로그](https://kimble125.tistory.com/)
+블로그 기고글: [흥행 디코딩 #1 - 콘텐츠 블로그](https://forrest125.tistory.com/114) | [기술 해설 - IT 블로그](https://kimble125.tistory.com/)
 
 ---
 
@@ -78,7 +71,10 @@ RSI = Σ(wins_i × time_weight_i) / Σ(time_weight_i)
 ```
 
 **확장 사항:**
-- ✅ **시간 감쇠 (Exponential decay)**: hard cutoff(5년) 대신 `exp(-0.15 × (years - 5))`로 점진적 감쇠
+- ✅ **시간 감쇠 (Exponential decay)**: 0년부터 즉시 감쇠 시작(decay_rate=0.10)하는 즉시 누진 모델
+- ✅ **역할 가중치 (Role Weight)**: 주연(1.0) / 조연(0.5) / 특별출연(0.2) / 카메오(0.1) 가중 적용으로 1회성 카메오작의 RSI 왜곡 방지
+- ✅ **영화 결측치 보정 (Movie-Only Fallback)**: TV 드라마 이력 없는 거장 배우 등의 경우 영화 관객수 기반 가상 RSI 환산 적용
+- ✅ **크리에이터 기획 연동**: notes 필드 파싱을 통해 스타 총괄 제작자/쇼러너(예: 김순옥)의 기획 파워 max-blend 반영
 - ✅ **OTT 환산**: Netflix Top10 → 가상 시청률 (`rank × duration × region`, 상한 35)
 - ✅ **신인 fallback**: 필모그래피 비어 있으면 수상·검증 가산점 기반 0.3~0.6 부여
 

@@ -3,131 +3,121 @@
   "methodology": "H-Score v3.1 Triple KPI — auto RSI + immediate decay (full=0, decay=0.10) + role_weight",
   "results": [
     {
-      "title": "21세기 대군부인",
-      "platform": "MBC+Disney+",
-      "release_date": "2026.04.10",
-      "combined": 66.1,
-      "first_ep": 69.4,
-      "avg": 63.6,
-      "rsi_victory": 67.5,
-      "verdict": "🔥 중박 이상",
-      "axis_scores": {
-        "cast_power": 6.5,
-        "creator_power": 8.0,
-        "ip_power": 2.0,
-        "platform_strategy": 7.0,
-        "pre_buzz": 8.34,
-        "genre_market_fit": 6.0
-      },
-      "cast_auto": {
-        "score": 6.5,
-        "avg_rsi": 0.645,
-        "max_rsi": 0.771,
-        "n_actors": 2,
-        "n_missing": 2,
-        "missing": [
-          "노상현",
-          "공승연"
-        ],
-        "individual": [
-          {
-            "name": "아이유",
-            "rsi": 0.771,
-            "rsgi": 3.0,
-            "n_tv": 6,
-            "n_ott": 0
-          },
-          {
-            "name": "변우석",
-            "rsi": 0.52,
-            "rsgi": 1.12,
-            "n_tv": 12,
-            "n_ott": 0
-          }
-        ]
-      },
-      "creator_auto": {
-        "director": null,
-        "writer": null,
-        "score": 0.0,
-        "director_rsi": 0.0,
-        "writer_rsi": 0.0
-      },
-      "original_manual_scores": {
-        "cast": 10.0,
-        "creator": 8.0,
-        "ip": 2.0,
-        "platform": 7.0,
-        "pre_buzz": null,
-        "genre": 6.0
-      }
-    },
-    {
       "title": "모두가 자신의 무가치함과 싸우고 있다",
       "platform": "JTBC+Netflix+TVING",
       "release_date": null,
-      "combined": 62.5,
-      "first_ep": 62.8,
-      "avg": 61.2,
-      "rsi_victory": 65.3,
-      "verdict": "⚡ 승부처",
+      "combined": 66.9,
+      "first_ep": 64.1,
+      "avg": 67.0,
+      "rsi_victory": 70.7,
+      "verdict": "🔥 중박 이상",
       "axis_scores": {
-        "cast_power": 8.5,
-        "creator_power": 6.0,
+        "cast_power": 7.5,
+        "creator_power": 9.0,
         "ip_power": 2.0,
         "platform_strategy": 8.0,
         "pre_buzz": 5.0,
         "genre_market_fit": 7.0
       },
       "cast_auto": {
-        "score": 8.5,
-        "avg_rsi": 0.822,
+        "score": 7.5,
+        "avg_rsi": 0.699,
         "max_rsi": 1.0,
-        "n_actors": 4,
-        "n_missing": 4,
-        "missing": [
-          "강말금",
-          "배종옥",
-          "한선화",
-          "최원영"
-        ],
+        "n_actors": 8,
+        "n_missing": 0,
+        "missing": [],
         "individual": [
           {
             "name": "구교환",
             "rsi": 1.0,
             "rsgi": 7.19,
             "n_tv": 2,
-            "n_ott": 0
+            "n_ott": 0,
+            "movie_bonus": 0.0
           },
           {
             "name": "고윤정",
             "rsi": 0.815,
             "rsgi": 0.66,
             "n_tv": 4,
-            "n_ott": 0
+            "n_ott": 0,
+            "movie_bonus": 0.0
           },
           {
             "name": "오정세",
             "rsi": 0.655,
             "rsgi": 1.71,
             "n_tv": 17,
-            "n_ott": 0
+            "n_ott": 0,
+            "movie_bonus": 0.0
+          },
+          {
+            "name": "강말금",
+            "rsi": 0.7,
+            "rsgi": 1.8,
+            "n_tv": 11,
+            "n_ott": 0,
+            "movie_bonus": 0.0
           },
           {
             "name": "박해준",
             "rsi": 0.817,
             "rsgi": 3.94,
             "n_tv": 8,
-            "n_ott": 0
+            "n_ott": 0,
+            "movie_bonus": 0.0
+          },
+          {
+            "name": "배종옥",
+            "rsi": 0.502,
+            "rsgi": 1.77,
+            "n_tv": 14,
+            "n_ott": 0,
+            "movie_bonus": 0.0
+          },
+          {
+            "name": "한선화",
+            "rsi": 0.384,
+            "rsgi": -0.46,
+            "n_tv": 14,
+            "n_ott": 0,
+            "movie_bonus": 0.0
+          },
+          {
+            "name": "최원영",
+            "rsi": 0.718,
+            "rsgi": 1.68,
+            "n_tv": 18,
+            "n_ott": 0,
+            "movie_bonus": 0.0
           }
         ]
       },
       "creator_auto": {
-        "director": null,
-        "writer": null,
-        "score": 0.0,
-        "director_rsi": 0.0,
-        "writer_rsi": 0.0
+        "director": {
+          "name": "차영훈",
+          "rsi": 1.0,
+          "n_credits": 6,
+          "movie_bonus": 0.0
+        },
+        "writer": {
+          "name": "박해영",
+          "rsi": 0.799,
+          "n_credits": 2,
+          "movie_bonus": 0.0
+        },
+        "creator": null,
+        "score": 9.0,
+        "director_rsi": 1.0,
+        "writer_rsi": 0.799
+      },
+      "verification": {
+        "needed": true,
+        "cast_unverified": [
+          "구교환"
+        ],
+        "creator_unverified": [],
+        "confidence": 0.9
       },
       "original_manual_scores": {
         "cast": 7.0,
@@ -139,20 +129,130 @@
       }
     },
     {
+      "title": "원더풀스",
+      "platform": "Netflix",
+      "release_date": "2026.05.15",
+      "combined": 59.0,
+      "first_ep": 60.5,
+      "avg": 57.0,
+      "rsi_victory": 61.5,
+      "verdict": "⚡ 승부처",
+      "axis_scores": {
+        "cast_power": 6.7,
+        "creator_power": 5.0,
+        "ip_power": 3.0,
+        "platform_strategy": 10.0,
+        "pre_buzz": 5.0,
+        "genre_market_fit": 6.0
+      },
+      "cast_auto": {
+        "score": 6.7,
+        "avg_rsi": 0.624,
+        "max_rsi": 0.815,
+        "n_actors": 6,
+        "n_missing": 0,
+        "missing": [],
+        "individual": [
+          {
+            "name": "박은빈",
+            "rsi": 0.815,
+            "rsgi": 3.43,
+            "n_tv": 14,
+            "n_ott": 0,
+            "movie_bonus": 0.0
+          },
+          {
+            "name": "차은우",
+            "rsi": 0.438,
+            "rsgi": -0.44,
+            "n_tv": 9,
+            "n_ott": 0,
+            "movie_bonus": 0.0
+          },
+          {
+            "name": "손현주",
+            "rsi": 0.745,
+            "rsgi": 1.94,
+            "n_tv": 15,
+            "n_ott": 0,
+            "movie_bonus": 0.0
+          },
+          {
+            "name": "김해숙",
+            "rsi": 0.661,
+            "rsgi": 3.89,
+            "n_tv": 21,
+            "n_ott": 0,
+            "movie_bonus": 0.0
+          },
+          {
+            "name": "최대훈",
+            "rsi": 0.576,
+            "rsgi": 1.83,
+            "n_tv": 16,
+            "n_ott": 0,
+            "movie_bonus": 0.0
+          },
+          {
+            "name": "임성재",
+            "rsi": 0.51,
+            "rsgi": 2.78,
+            "n_tv": 7,
+            "n_ott": 0,
+            "movie_bonus": 0.0
+          }
+        ]
+      },
+      "creator_auto": {
+        "director": {
+          "name": "유인식",
+          "rsi": 1.0,
+          "n_credits": 7,
+          "movie_bonus": 0.0
+        },
+        "writer": {
+          "name": "허다중",
+          "rsi": 0.0,
+          "n_credits": 1,
+          "movie_bonus": 0.0
+        },
+        "creator": null,
+        "score": 5.0,
+        "director_rsi": 1.0,
+        "writer_rsi": 0.0
+      },
+      "verification": {
+        "needed": true,
+        "cast_unverified": [],
+        "creator_unverified": [
+          "작가:허다중"
+        ],
+        "confidence": 0.88
+      },
+      "original_manual_scores": {
+        "cast": 9.0,
+        "creator": 9.0,
+        "ip": 3.0,
+        "platform": 10.0,
+        "pre_buzz": null,
+        "genre": 6.0
+      }
+    },
+    {
       "title": "오늘도 매진했습니다",
       "platform": "SBS+Netflix",
       "release_date": "2026.04.22",
-      "combined": 60.5,
-      "first_ep": 60.9,
-      "avg": 58.8,
-      "rsi_victory": 63.9,
+      "combined": 58.7,
+      "first_ep": 57.7,
+      "avg": 57.7,
+      "rsi_victory": 62.7,
       "verdict": "⚡ 승부처",
       "axis_scores": {
         "cast_power": 6.0,
         "creator_power": 8.0,
         "ip_power": 2.0,
         "platform_strategy": 8.0,
-        "pre_buzz": 5.96,
+        "pre_buzz": 5.0,
         "genre_market_fit": 5.0
       },
       "cast_auto": {
@@ -170,30 +270,53 @@
             "rsi": 0.663,
             "rsgi": 3.36,
             "n_tv": 11,
-            "n_ott": 0
+            "n_ott": 0,
+            "movie_bonus": 0.0
           },
           {
             "name": "채원빈",
             "rsi": 0.344,
             "rsgi": -0.99,
             "n_tv": 3,
-            "n_ott": 0
+            "n_ott": 0,
+            "movie_bonus": 0.0
           },
           {
             "name": "김범",
             "rsi": 0.727,
             "rsgi": 1.56,
             "n_tv": 11,
-            "n_ott": 0
+            "n_ott": 0,
+            "movie_bonus": 0.0
           }
         ]
       },
       "creator_auto": {
-        "director": null,
-        "writer": null,
+        "director": {
+          "name": "이슬기",
+          "rsi": 0.0,
+          "n_credits": 0,
+          "movie_bonus": 0.0
+        },
+        "writer": {
+          "name": "진승희",
+          "rsi": 0.0,
+          "n_credits": 1,
+          "movie_bonus": 0.0
+        },
+        "creator": null,
         "score": 0.0,
         "director_rsi": 0.0,
         "writer_rsi": 0.0
+      },
+      "verification": {
+        "needed": true,
+        "cast_unverified": [],
+        "creator_unverified": [
+          "감독:이슬기",
+          "작가:진승희"
+        ],
+        "confidence": 0.6
       },
       "original_manual_scores": {
         "cast": 8.0,
@@ -205,20 +328,201 @@
       }
     },
     {
+      "title": "오십프로",
+      "platform": "MBC+TVING+Wavve",
+      "release_date": "2026.05.22",
+      "combined": 57.1,
+      "first_ep": 54.3,
+      "avg": 58.0,
+      "rsi_victory": 59.3,
+      "verdict": "⚡ 승부처",
+      "axis_scores": {
+        "cast_power": 7.0,
+        "creator_power": 7.0,
+        "ip_power": 2.0,
+        "platform_strategy": 6.0,
+        "pre_buzz": 4.0,
+        "genre_market_fit": 7.0
+      },
+      "cast_auto": {
+        "score": 7.0,
+        "avg_rsi": 0.681,
+        "max_rsi": 0.718,
+        "n_actors": 3,
+        "n_missing": 0,
+        "missing": [],
+        "individual": [
+          {
+            "name": "신하균",
+            "rsi": 0.669,
+            "rsgi": 1.25,
+            "n_tv": 8,
+            "n_ott": 0,
+            "movie_bonus": 0.0
+          },
+          {
+            "name": "오정세",
+            "rsi": 0.655,
+            "rsgi": 1.71,
+            "n_tv": 17,
+            "n_ott": 0,
+            "movie_bonus": 0.0
+          },
+          {
+            "name": "허성태",
+            "rsi": 0.718,
+            "rsgi": 1.14,
+            "n_tv": 10,
+            "n_ott": 0,
+            "movie_bonus": 0.0
+          }
+        ]
+      },
+      "creator_auto": {
+        "director": {
+          "name": "한동화",
+          "rsi": 0.0,
+          "n_credits": 2,
+          "movie_bonus": 0.0
+        },
+        "writer": {
+          "name": "장원섭",
+          "rsi": 0.0,
+          "n_credits": 1,
+          "movie_bonus": 0.0
+        },
+        "creator": null,
+        "score": 0.0,
+        "director_rsi": 0.0,
+        "writer_rsi": 0.0
+      },
+      "verification": {
+        "needed": true,
+        "cast_unverified": [],
+        "creator_unverified": [
+          "감독:한동화",
+          "작가:장원섭"
+        ],
+        "confidence": 0.6
+      },
+      "original_manual_scores": {
+        "cast": 8.0,
+        "creator": 7.0,
+        "ip": 2.0,
+        "platform": 6.0,
+        "pre_buzz": null,
+        "genre": 7.0
+      }
+    },
+    {
+      "title": "유미의 세포들3",
+      "platform": "TVING→tvN",
+      "release_date": "2026.04.13",
+      "combined": 57.0,
+      "first_ep": 58.3,
+      "avg": 56.6,
+      "rsi_victory": 55.9,
+      "verdict": "⚡ 승부처",
+      "axis_scores": {
+        "cast_power": 6.9,
+        "creator_power": 2.3,
+        "ip_power": 9.0,
+        "platform_strategy": 7.0,
+        "pre_buzz": 5.0,
+        "genre_market_fit": 6.0
+      },
+      "cast_auto": {
+        "score": 6.9,
+        "avg_rsi": 0.656,
+        "max_rsi": 0.823,
+        "n_actors": 4,
+        "n_missing": 0,
+        "missing": [],
+        "individual": [
+          {
+            "name": "김고은",
+            "rsi": 0.519,
+            "rsgi": 0.68,
+            "n_tv": 6,
+            "n_ott": 0,
+            "movie_bonus": 0.0
+          },
+          {
+            "name": "김재원",
+            "rsi": 0.751,
+            "rsgi": 3.8,
+            "n_tv": 4,
+            "n_ott": 0,
+            "movie_bonus": 0.0
+          },
+          {
+            "name": "전석호",
+            "rsi": 0.823,
+            "rsgi": 1.75,
+            "n_tv": 14,
+            "n_ott": 0,
+            "movie_bonus": 0.0
+          },
+          {
+            "name": "최다니엘",
+            "rsi": 0.533,
+            "rsgi": 0.31,
+            "n_tv": 11,
+            "n_ott": 0,
+            "movie_bonus": 0.0
+          }
+        ]
+      },
+      "creator_auto": {
+        "director": {
+          "name": "이상엽",
+          "rsi": 0.0,
+          "n_credits": 0,
+          "movie_bonus": 0.0
+        },
+        "writer": {
+          "name": "송재정",
+          "rsi": 0.451,
+          "n_credits": 3,
+          "movie_bonus": 0.0
+        },
+        "creator": null,
+        "score": 2.3,
+        "director_rsi": 0.0,
+        "writer_rsi": 0.451
+      },
+      "verification": {
+        "needed": true,
+        "cast_unverified": [],
+        "creator_unverified": [
+          "감독:이상엽"
+        ],
+        "confidence": 0.83
+      },
+      "original_manual_scores": {
+        "cast": 7.0,
+        "creator": 7.0,
+        "ip": 9.0,
+        "platform": 7.0,
+        "pre_buzz": null,
+        "genre": 6.0
+      }
+    },
+    {
       "title": "허수아비",
       "platform": "ENA+GenieTV",
       "release_date": "2026.04.20",
-      "combined": 56.8,
-      "first_ep": 51.4,
-      "avg": 59.2,
-      "rsi_victory": 58.7,
+      "combined": 55.9,
+      "first_ep": 49.8,
+      "avg": 58.7,
+      "rsi_victory": 58.1,
       "verdict": "⚡ 승부처",
       "axis_scores": {
         "cast_power": 6.9,
         "creator_power": 8.0,
         "ip_power": 3.0,
         "platform_strategy": 4.0,
-        "pre_buzz": 3.49,
+        "pre_buzz": 3.0,
         "genre_market_fit": 7.0
       },
       "cast_auto": {
@@ -234,28 +538,32 @@
             "rsi": 0.816,
             "rsgi": 4.98,
             "n_tv": 6,
-            "n_ott": 0
+            "n_ott": 0,
+            "movie_bonus": 0.0
           },
           {
             "name": "이희준",
             "rsi": 0.64,
             "rsgi": 2.42,
             "n_tv": 11,
-            "n_ott": 0
+            "n_ott": 0,
+            "movie_bonus": 0.0
           },
           {
             "name": "진서연",
             "rsi": 0.484,
             "rsgi": 2.57,
             "n_tv": 5,
-            "n_ott": 0
+            "n_ott": 0,
+            "movie_bonus": 0.0
           },
           {
             "name": "진선규",
             "rsi": 0.712,
             "rsgi": 3.15,
             "n_tv": 14,
-            "n_ott": 0
+            "n_ott": 0,
+            "movie_bonus": 0.0
           }
         ]
       },
@@ -263,16 +571,25 @@
         "director": {
           "name": "박준우",
           "rsi": 0.592,
-          "n_credits": 4
+          "n_credits": 4,
+          "movie_bonus": 0.0
         },
         "writer": {
           "name": "이지현",
           "rsi": 1.0,
-          "n_credits": 1
+          "n_credits": 1,
+          "movie_bonus": 0.0
         },
+        "creator": null,
         "score": 8.0,
         "director_rsi": 0.592,
         "writer_rsi": 1.0
+      },
+      "verification": {
+        "needed": false,
+        "cast_unverified": [],
+        "creator_unverified": [],
+        "confidence": 1.0
       },
       "original_manual_scores": {
         "cast": 6.0,
@@ -284,87 +601,301 @@
       }
     },
     {
-      "title": "유미의 세포들3",
-      "platform": "TVING→tvN",
-      "release_date": "2026.04.13",
-      "combined": 53.8,
-      "first_ep": 55.1,
-      "avg": 53.9,
-      "rsi_victory": 51.5,
-      "verdict": "❓ 다크호스",
+      "title": "21세기 대군부인",
+      "platform": "MBC+Disney+",
+      "release_date": "2026.04.10",
+      "combined": 55.3,
+      "first_ep": 65.5,
+      "avg": 50.0,
+      "rsi_victory": 53.4,
+      "verdict": "⚡ 승부처",
       "axis_scores": {
-        "cast_power": 5.2,
-        "creator_power": 2.3,
-        "ip_power": 9.0,
+        "cast_power": 6.9,
+        "creator_power": 2.0,
+        "ip_power": 2.0,
         "platform_strategy": 7.0,
-        "pre_buzz": 5.14,
+        "pre_buzz": 9.0,
         "genre_market_fit": 6.0
       },
       "cast_auto": {
-        "score": 5.2,
-        "avg_rsi": 0.519,
-        "max_rsi": 0.519,
-        "n_actors": 1,
-        "n_missing": 3,
-        "missing": [
-          "김재원",
-          "전석호",
-          "최다니엘"
-        ],
+        "score": 6.9,
+        "avg_rsi": 0.66,
+        "max_rsi": 0.771,
+        "n_actors": 4,
+        "n_missing": 0,
+        "missing": [],
         "individual": [
           {
-            "name": "김고은",
-            "rsi": 0.519,
-            "rsgi": 0.68,
+            "name": "아이유",
+            "rsi": 0.771,
+            "rsgi": 3.48,
             "n_tv": 6,
-            "n_ott": 0
+            "n_ott": 0,
+            "movie_bonus": 0.0
+          },
+          {
+            "name": "변우석",
+            "rsi": 0.52,
+            "rsgi": 1.34,
+            "n_tv": 12,
+            "n_ott": 0,
+            "movie_bonus": 0.0
+          },
+          {
+            "name": "노상현",
+            "rsi": 0.599,
+            "rsgi": 3.25,
+            "n_tv": 2,
+            "n_ott": 0,
+            "movie_bonus": 0.0
+          },
+          {
+            "name": "공승연",
+            "rsi": 0.751,
+            "rsgi": 2.18,
+            "n_tv": 11,
+            "n_ott": 0,
+            "movie_bonus": 0.0
           }
         ]
       },
       "creator_auto": {
-        "director": {
-          "name": "이상엽",
-          "rsi": 0.0,
-          "n_credits": 0
-        },
+        "director": null,
         "writer": {
-          "name": "송재정",
-          "rsi": 0.451,
-          "n_credits": 3
+          "name": "유지원",
+          "rsi": 0.4,
+          "n_credits": 0,
+          "movie_bonus": 0.0
         },
-        "score": 2.3,
+        "creator": null,
+        "score": 2.0,
         "director_rsi": 0.0,
-        "writer_rsi": 0.451
+        "writer_rsi": 0.4
+      },
+      "verification": {
+        "needed": true,
+        "cast_unverified": [
+          "노상현"
+        ],
+        "creator_unverified": [],
+        "confidence": 0.83
       },
       "original_manual_scores": {
-        "cast": 7.0,
-        "creator": 7.0,
-        "ip": 9.0,
+        "cast": 10.0,
+        "creator": 8.0,
+        "ip": 2.0,
         "platform": 7.0,
         "pre_buzz": null,
         "genre": 6.0
       }
     },
     {
+      "title": "취사병 전설이 되다",
+      "platform": "TVING+tvN",
+      "release_date": "2026.05.11",
+      "combined": 53.2,
+      "first_ep": 54.7,
+      "avg": 55.2,
+      "rsi_victory": 45.8,
+      "verdict": "❓ 다크호스",
+      "axis_scores": {
+        "cast_power": 0.0,
+        "creator_power": 3.3,
+        "ip_power": 9.0,
+        "platform_strategy": 8.0,
+        "pre_buzz": 7.0,
+        "genre_market_fit": 8.0
+      },
+      "cast_auto": {
+        "score": 0.0,
+        "avg_rsi": 0.0,
+        "max_rsi": 0.0,
+        "n_actors": 1,
+        "n_missing": 0,
+        "missing": [],
+        "individual": [
+          {
+            "name": "박지훈",
+            "rsi": 0.0,
+            "rsgi": -2.78,
+            "n_tv": 2,
+            "n_ott": 0,
+            "movie_bonus": 0.0
+          }
+        ]
+      },
+      "creator_auto": {
+        "director": {
+          "name": "조남형",
+          "rsi": 0.658,
+          "n_credits": 3,
+          "movie_bonus": 0.0
+        },
+        "writer": {
+          "name": "최룡",
+          "rsi": 0.0,
+          "n_credits": 0,
+          "movie_bonus": 0.0
+        },
+        "creator": null,
+        "score": 3.3,
+        "director_rsi": 0.658,
+        "writer_rsi": 0.0
+      },
+      "verification": {
+        "needed": true,
+        "cast_unverified": [
+          "박지훈"
+        ],
+        "creator_unverified": [
+          "작가:최룡"
+        ],
+        "confidence": 0.33
+      },
+      "original_manual_scores": {
+        "cast": 8.0,
+        "creator": 8.0,
+        "ip": 9.0,
+        "platform": 8.0,
+        "pre_buzz": null,
+        "genre": 8.0
+      }
+    },
+    {
+      "title": "신입사원 강 회장",
+      "platform": "JTBC+TVING",
+      "release_date": "2026.05.30",
+      "combined": 52.8,
+      "first_ep": 53.5,
+      "avg": 52.3,
+      "rsi_victory": 53.2,
+      "verdict": "❓ 다크호스",
+      "axis_scores": {
+        "cast_power": 5.9,
+        "creator_power": 4.3,
+        "ip_power": 6.0,
+        "platform_strategy": 6.0,
+        "pre_buzz": 5.0,
+        "genre_market_fit": 5.0
+      },
+      "cast_auto": {
+        "score": 5.9,
+        "avg_rsi": 0.543,
+        "max_rsi": 0.763,
+        "n_actors": 6,
+        "n_missing": 0,
+        "missing": [],
+        "individual": [
+          {
+            "name": "손현주",
+            "rsi": 0.745,
+            "rsgi": 1.94,
+            "n_tv": 15,
+            "n_ott": 0,
+            "movie_bonus": 0.0
+          },
+          {
+            "name": "이준영",
+            "rsi": 0.236,
+            "rsgi": -1.64,
+            "n_tv": 7,
+            "n_ott": 0,
+            "movie_bonus": 0.0
+          },
+          {
+            "name": "이주명",
+            "rsi": 0.475,
+            "rsgi": 1.69,
+            "n_tv": 4,
+            "n_ott": 0,
+            "movie_bonus": 0.0
+          },
+          {
+            "name": "전혜진",
+            "rsi": 0.539,
+            "rsgi": 0.65,
+            "n_tv": 4,
+            "n_ott": 0,
+            "movie_bonus": 0.0
+          },
+          {
+            "name": "진구",
+            "rsi": 0.499,
+            "rsgi": -0.23,
+            "n_tv": 10,
+            "n_ott": 0,
+            "movie_bonus": 0.0
+          },
+          {
+            "name": "정재성",
+            "rsi": 0.763,
+            "rsgi": 3.19,
+            "n_tv": 14,
+            "n_ott": 0,
+            "movie_bonus": 0.0
+          }
+        ]
+      },
+      "creator_auto": {
+        "director": {
+          "name": "고혜진",
+          "rsi": 0.0,
+          "n_credits": 2,
+          "movie_bonus": 0.0
+        },
+        "writer": {
+          "name": "현지민",
+          "rsi": 0.0,
+          "n_credits": 1,
+          "movie_bonus": 0.0
+        },
+        "creator": {
+          "name": "김순옥",
+          "rsi": 0.859,
+          "n_credits": 6,
+          "movie_bonus": 0.0
+        },
+        "score": 4.3,
+        "director_rsi": 0.0,
+        "writer_rsi": 0.859
+      },
+      "verification": {
+        "needed": true,
+        "cast_unverified": [],
+        "creator_unverified": [
+          "감독:고혜진"
+        ],
+        "confidence": 0.88
+      },
+      "original_manual_scores": {
+        "cast": 8.0,
+        "creator": 7.0,
+        "ip": 6.0,
+        "platform": 6.0,
+        "pre_buzz": null,
+        "genre": 5.0
+      }
+    },
+    {
       "title": "골드랜드",
       "platform": "Disney+",
       "release_date": "2026.04.29",
-      "combined": 52.6,
-      "first_ep": 51.7,
-      "avg": 52.6,
-      "rsi_victory": 53.7,
+      "combined": 51.5,
+      "first_ep": 49.5,
+      "avg": 52.0,
+      "rsi_victory": 53.1,
       "verdict": "❓ 다크호스",
       "axis_scores": {
-        "cast_power": 5.1,
+        "cast_power": 5.3,
         "creator_power": 5.0,
         "ip_power": 2.0,
         "platform_strategy": 9.0,
-        "pre_buzz": 3.8,
+        "pre_buzz": 3.0,
         "genre_market_fit": 7.0
       },
       "cast_auto": {
-        "score": 5.1,
-        "avg_rsi": 0.461,
+        "score": 5.3,
+        "avg_rsi": 0.484,
         "max_rsi": 1.0,
         "n_actors": 6,
         "n_missing": 0,
@@ -372,45 +903,51 @@
         "individual": [
           {
             "name": "박보영",
-            "rsi": 0.635,
-            "rsgi": 0.52,
-            "n_tv": 3,
-            "n_ott": 0
+            "rsi": 0.772,
+            "rsgi": 0.51,
+            "n_tv": 4,
+            "n_ott": 0,
+            "movie_bonus": 0.0
           },
           {
             "name": "김성철",
             "rsi": 0.622,
             "rsgi": 0.41,
             "n_tv": 3,
-            "n_ott": 0
+            "n_ott": 0,
+            "movie_bonus": 0.0
           },
           {
             "name": "이현욱",
             "rsi": 0.0,
             "rsgi": -2.03,
             "n_tv": 2,
-            "n_ott": 0
+            "n_ott": 0,
+            "movie_bonus": 0.0
           },
           {
             "name": "김희원",
             "rsi": 0.331,
             "rsgi": -0.24,
             "n_tv": 3,
-            "n_ott": 0
+            "n_ott": 0,
+            "movie_bonus": 0.0
           },
           {
             "name": "문정희",
             "rsi": 1.0,
             "rsgi": 3.65,
             "n_tv": 2,
-            "n_ott": 0
+            "n_ott": 0,
+            "movie_bonus": 0.0
           },
           {
             "name": "이광수",
             "rsi": 0.177,
             "rsgi": -1.54,
             "n_tv": 2,
-            "n_ott": 0
+            "n_ott": 0,
+            "movie_bonus": 0.0
           }
         ]
       },
@@ -418,16 +955,31 @@
         "director": {
           "name": "김성훈",
           "rsi": 1.0,
-          "n_credits": 1
+          "n_credits": 1,
+          "movie_bonus": 0.0
         },
         "writer": {
           "name": "황조윤",
           "rsi": 0.0,
-          "n_credits": 1
+          "n_credits": 1,
+          "movie_bonus": 0.0
         },
+        "creator": null,
         "score": 5.0,
         "director_rsi": 1.0,
         "writer_rsi": 0.0
+      },
+      "verification": {
+        "needed": true,
+        "cast_unverified": [
+          "이현욱",
+          "문정희",
+          "이광수"
+        ],
+        "creator_unverified": [
+          "작가:황조윤"
+        ],
+        "confidence": 0.5
       },
       "original_manual_scores": {
         "cast": 6.0,
@@ -442,14 +994,14 @@
       "title": "은밀한 감사",
       "platform": "tvN+TVING",
       "release_date": null,
-      "combined": 50.7,
-      "first_ep": 48.9,
-      "avg": 50.7,
-      "rsi_victory": 53.5,
+      "combined": 50.9,
+      "first_ep": 49.0,
+      "avg": 50.9,
+      "rsi_victory": 53.7,
       "verdict": "❓ 다크호스",
       "axis_scores": {
         "cast_power": 5.5,
-        "creator_power": 6.8,
+        "creator_power": 6.9,
         "ip_power": 2.0,
         "platform_strategy": 6.0,
         "pre_buzz": 4.0,
@@ -468,38 +1020,50 @@
             "rsi": 0.72,
             "rsgi": 5.3,
             "n_tv": 16,
-            "n_ott": 0
+            "n_ott": 0,
+            "movie_bonus": 0.0
           },
           {
             "name": "공명",
             "rsi": 0.401,
             "rsgi": -0.38,
             "n_tv": 9,
-            "n_ott": 0
+            "n_ott": 0,
+            "movie_bonus": 0.0
           },
           {
             "name": "김재욱",
             "rsi": 0.458,
             "rsgi": 0.02,
             "n_tv": 7,
-            "n_ott": 0
+            "n_ott": 0,
+            "movie_bonus": 0.0
           }
         ]
       },
       "creator_auto": {
         "director": {
           "name": "이수현",
-          "rsi": 0.355,
-          "n_credits": 3
+          "rsi": 0.381,
+          "n_credits": 4,
+          "movie_bonus": 0.0
         },
         "writer": {
           "name": "여은호",
           "rsi": 1.0,
-          "n_credits": 1
+          "n_credits": 1,
+          "movie_bonus": 0.0
         },
-        "score": 6.8,
-        "director_rsi": 0.355,
+        "creator": null,
+        "score": 6.9,
+        "director_rsi": 0.381,
         "writer_rsi": 1.0
+      },
+      "verification": {
+        "needed": false,
+        "cast_unverified": [],
+        "creator_unverified": [],
+        "confidence": 1.0
       },
       "original_manual_scores": {
         "cast": 7.0,
@@ -511,20 +1075,98 @@
       }
     },
     {
+      "title": "멋진 신세계",
+      "platform": "SBS+Netflix",
+      "release_date": "2026.05.08",
+      "combined": 44.8,
+      "first_ep": 50.2,
+      "avg": 41.3,
+      "rsi_victory": 45.3,
+      "verdict": "📉 난항 예상",
+      "axis_scores": {
+        "cast_power": 6.1,
+        "creator_power": 1.4,
+        "ip_power": 2.0,
+        "platform_strategy": 8.0,
+        "pre_buzz": 5.0,
+        "genre_market_fit": 5.0
+      },
+      "cast_auto": {
+        "score": 6.1,
+        "avg_rsi": 0.449,
+        "max_rsi": 0.454,
+        "n_actors": 2,
+        "n_missing": 0,
+        "missing": [],
+        "individual": [
+          {
+            "name": "임지연",
+            "rsi": 0.444,
+            "rsgi": 3.06,
+            "n_tv": 12,
+            "n_ott": 0,
+            "movie_bonus": 0.0
+          },
+          {
+            "name": "허남준",
+            "rsi": 0.454,
+            "rsgi": 1.59,
+            "n_tv": 9,
+            "n_ott": 0,
+            "movie_bonus": 0.0
+          }
+        ]
+      },
+      "creator_auto": {
+        "director": {
+          "name": "한태섭",
+          "rsi": 0.229,
+          "n_credits": 3,
+          "movie_bonus": 0.0
+        },
+        "writer": {
+          "name": "강현주",
+          "rsi": 0.0,
+          "n_credits": 1,
+          "movie_bonus": 0.25
+        },
+        "creator": null,
+        "score": 1.4,
+        "director_rsi": 0.229,
+        "writer_rsi": 0.0
+      },
+      "verification": {
+        "needed": true,
+        "cast_unverified": [],
+        "creator_unverified": [
+          "작가:강현주"
+        ],
+        "confidence": 0.75
+      },
+      "original_manual_scores": {
+        "cast": 7.0,
+        "creator": 7.0,
+        "ip": 2.0,
+        "platform": 8.0,
+        "pre_buzz": null,
+        "genre": 5.0
+      }
+    },
+    {
       "title": "기리고",
       "platform": "Netflix",
       "release_date": "2026.04.24",
-      "combined": 44.9,
-      "first_ep": 44.7,
-      "avg": 44.3,
-      "rsi_victory": 46.7,
+      "combined": 44.1,
+      "first_ep": 43.2,
+      "avg": 43.8,
+      "rsi_victory": 46.1,
       "verdict": "📉 난항 예상",
       "axis_scores": {
         "cast_power": 4.8,
         "creator_power": 3.0,
         "ip_power": 2.0,
         "platform_strategy": 10.0,
-        "pre_buzz": 2.43,
+        "pre_buzz": 2.0,
         "genre_market_fit": 6.0
       },
       "cast_auto": {
@@ -540,37 +1182,63 @@
             "rsi": 0.162,
             "rsgi": -0.02,
             "n_tv": 11,
-            "n_ott": 0
+            "n_ott": 0,
+            "movie_bonus": 0.0
           },
           {
             "name": "이우제",
             "rsi": 0.621,
             "rsgi": 1.95,
             "n_tv": 5,
-            "n_ott": 0
+            "n_ott": 0,
+            "movie_bonus": 0.0
           },
           {
             "name": "박예은",
             "rsi": 0.0,
             "rsgi": 0.0,
             "n_tv": 0,
-            "n_ott": 0
+            "n_ott": 0,
+            "movie_bonus": 0.0
           },
           {
             "name": "임형준",
             "rsi": 1.0,
             "rsgi": 4.39,
             "n_tv": 5,
-            "n_ott": 0
+            "n_ott": 0,
+            "movie_bonus": 0.0
           }
         ]
       },
       "creator_auto": {
-        "director": null,
-        "writer": null,
+        "director": {
+          "name": "박윤서",
+          "rsi": 0.0,
+          "n_credits": 2,
+          "movie_bonus": 0.0
+        },
+        "writer": {
+          "name": "박중섭",
+          "rsi": 0.0,
+          "n_credits": 1,
+          "movie_bonus": 0.0
+        },
+        "creator": null,
         "score": 0.0,
         "director_rsi": 0.0,
         "writer_rsi": 0.0
+      },
+      "verification": {
+        "needed": true,
+        "cast_unverified": [
+          "박예은"
+        ],
+        "creator_unverified": [
+          "감독:박윤서",
+          "작가:박중섭"
+        ],
+        "confidence": 0.5
       },
       "original_manual_scores": {
         "cast": 3.0,
@@ -585,13 +1253,13 @@
       "title": "로맨스의 절댓값",
       "platform": null,
       "release_date": null,
-      "combined": 37.2,
-      "first_ep": 30.8,
-      "avg": 39.7,
-      "rsi_victory": 40.3,
+      "combined": 37.9,
+      "first_ep": 31.7,
+      "avg": 40.3,
+      "rsi_victory": 41.4,
       "verdict": "📉 난항 예상",
       "axis_scores": {
-        "cast_power": 5,
+        "cast_power": 5.4,
         "creator_power": 5,
         "ip_power": 2,
         "platform_strategy": 5,
@@ -599,15 +1267,93 @@
         "genre_market_fit": 5
       },
       "cast_auto": {
-        "score": null,
-        "reason": "all actors missing: ['여의주', '김향기', '가우수', '차학연', '노다주', '김재현', '정기전', '손정혁', '윤동주', '김동규']"
+        "score": 5.4,
+        "avg_rsi": 0.492,
+        "max_rsi": 1.0,
+        "n_actors": 7,
+        "n_missing": 3,
+        "missing": [
+          "가우수",
+          "노다주",
+          "정기전"
+        ],
+        "individual": [
+          {
+            "name": "여의주",
+            "rsi": 0.544,
+            "rsgi": 0.97,
+            "n_tv": 5,
+            "n_ott": 0,
+            "movie_bonus": 0.0
+          },
+          {
+            "name": "김향기",
+            "rsi": 0.362,
+            "rsgi": 0.63,
+            "n_tv": 3,
+            "n_ott": 0,
+            "movie_bonus": 0.0
+          },
+          {
+            "name": "차학연",
+            "rsi": 0.38,
+            "rsgi": 0.71,
+            "n_tv": 11,
+            "n_ott": 0,
+            "movie_bonus": 0.0
+          },
+          {
+            "name": "김재현",
+            "rsi": 0.0,
+            "rsgi": 0.0,
+            "n_tv": 0,
+            "n_ott": 0,
+            "movie_bonus": 0.0
+          },
+          {
+            "name": "손정혁",
+            "rsi": 0.668,
+            "rsgi": 4.01,
+            "n_tv": 2,
+            "n_ott": 0,
+            "movie_bonus": 0.0
+          },
+          {
+            "name": "윤동주",
+            "rsi": 0.0,
+            "rsgi": 0.0,
+            "n_tv": 0,
+            "n_ott": 0,
+            "movie_bonus": 0.0
+          },
+          {
+            "name": "김동규",
+            "rsi": 1.0,
+            "rsgi": 0.71,
+            "n_tv": 1,
+            "n_ott": 0,
+            "movie_bonus": 0.0
+          }
+        ]
       },
       "creator_auto": {
         "director": null,
         "writer": null,
+        "creator": null,
         "score": 0.0,
         "director_rsi": 0.0,
         "writer_rsi": 0.0
+      },
+      "verification": {
+        "needed": true,
+        "cast_unverified": [
+          "김재현",
+          "손정혁",
+          "윤동주",
+          "김동규"
+        ],
+        "creator_unverified": [],
+        "confidence": 0.56
       },
       "original_manual_scores": {
         "cast": 0.0,

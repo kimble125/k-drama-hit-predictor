@@ -53,7 +53,7 @@ def compute_cast_score(drama, filmography_root: Path) -> dict:
         return {"score": None, "reason": f"all actors missing: {missing}"}
 
     agg = aggregate_cast_rsi(persons, lookback_years=LOOKBACK_YEARS)
-    score = cast_score_from_rsi(agg["avg_rsi"], agg["total_awards"], agg["n_actors"])
+    score = cast_score_from_rsi(agg["avg_rsi"], agg["total_awards"], agg["n_actors"], agg.get("total_movie_bonus", 0.0))
     return {
         "score": score,
         "avg_rsi": agg["avg_rsi"],
@@ -67,11 +67,14 @@ def compute_cast_score(drama, filmography_root: Path) -> dict:
 
 def compute_creator_score(drama, filmography_root: Path) -> dict:
     """director + writer 필모그래피 → 크리에이터 점수."""
+    import re
     d_rsi = 0.0
     w_rsi = 0.0
     d_awards = 0
     w_awards = 0
-    info = {"director": None, "writer": None}
+    d_movie_bonus = 0.0
+    w_movie_bonus = 0.0
+    info = {"director": None, "writer": None, "creator": None}
 
     if drama.director:
         dp = load_person(drama.director, "director", root=filmography_root)
@@ -79,7 +82,8 @@ def compute_creator_score(drama, filmography_root: Path) -> dict:
             r = calculate_rsi(dp, lookback_years=LOOKBACK_YEARS)
             d_rsi = r.rsi
             d_awards = r.award_count_5y
-            info["director"] = {"name": drama.director, "rsi": r.rsi, "n_credits": r.n_credits}
+            d_movie_bonus = getattr(r, "movie_bonus", 0.0)
+            info["director"] = {"name": drama.director, "rsi": r.rsi, "n_credits": r.n_credits, "movie_bonus": d_movie_bonus}
 
     if drama.writer:
         wp = load_person(drama.writer, "writer", root=filmography_root)
@@ -87,9 +91,37 @@ def compute_creator_score(drama, filmography_root: Path) -> dict:
             r = calculate_rsi(wp, lookback_years=LOOKBACK_YEARS)
             w_rsi = r.rsi
             w_awards = r.award_count_5y
-            info["writer"] = {"name": drama.writer, "rsi": r.rsi, "n_credits": r.n_credits}
+            w_movie_bonus = getattr(r, "movie_bonus", 0.0)
+            info["writer"] = {"name": drama.writer, "rsi": r.rsi, "n_credits": r.n_credits, "movie_bonus": w_movie_bonus}
 
-    score = creator_score_from_rsi(d_rsi, w_rsi, d_awards, w_awards)
+    # [개선 2] 크리에이터 기획/쇼러너 영향력 연동 (Chief Creator Support)
+    creator_name = None
+    if drama.notes:
+        match = re.search(r'([^|,\s]+)\s*크리에이터', drama.notes)
+        if match:
+            creator_name = match.group(1)
+
+    if creator_name:
+        cp = load_person(creator_name, "writer", root=filmography_root)
+        if cp:
+            r = calculate_rsi(cp, lookback_years=LOOKBACK_YEARS)
+            creator_rsi = r.rsi
+            creator_awards = r.award_count_5y
+            creator_movie_bonus = getattr(r, "movie_bonus", 0.0)
+            info["creator"] = {"name": creator_name, "rsi": creator_rsi, "n_credits": r.n_credits, "movie_bonus": creator_movie_bonus}
+            
+            # 작가와 크리에이터 중 최대값을 작가 역량(w_rsi 등)에 blending
+            w_rsi = max(w_rsi, creator_rsi)
+            w_awards = max(w_awards, creator_awards)
+            w_movie_bonus = max(w_movie_bonus, creator_movie_bonus)
+
+    score = creator_score_from_rsi(
+        director_rsi=d_rsi, writer_rsi=w_rsi,
+        director_awards=d_awards, writer_awards=w_awards,
+        is_repeat_collab=False,
+        director_movie_bonus=d_movie_bonus,
+        writer_movie_bonus=w_movie_bonus
+    )
     info["score"] = score
     info["director_rsi"] = d_rsi
     info["writer_rsi"] = w_rsi
@@ -137,6 +169,8 @@ def main() -> None:
             print(f"      - 감독 {creator_info['director']['name']}: rsi={creator_info['director']['rsi']}")
         if creator_info["writer"]:
             print(f"      - 작가 {creator_info['writer']['name']}: rsi={creator_info['writer']['rsi']}")
+        if creator_info.get("creator"):
+            print(f"      - 크리에이터 {creator_info['creator']['name']}: rsi={creator_info['creator']['rsi']}")
 
         # H-Score 계산 — 자동값으로 캐스트·크리에이터 교체
         axis_scores = {
@@ -152,8 +186,16 @@ def main() -> None:
         raw = d.pre_buzz_raw if d.pre_buzz_raw is not None else d.pre_buzz
         if d.release_date and raw is not None:
             try:
+                # [개선 3] 사전 화제성 측정일의 동적 설정 (Dynamic Pre-buzz Date)
+                # 방영일 1주일 전(release_date - 7일)을 측정 시점으로 자동 설정
+                from datetime import timedelta
+                from hit_predictor.core.temporal import _parse_date
+                rel_dt = _parse_date(d.release_date)
+                m_dt = rel_dt - timedelta(days=7)
+                m_date_str = m_dt.strftime("%Y.%m.%d")
+                
                 axis_scores["pre_buzz"] = normalize_pre_buzz(
-                    raw, d.release_date, MEASUREMENT_DATE, alpha=DEFAULT_ALPHA,
+                    raw, d.release_date, m_date_str, alpha=DEFAULT_ALPHA,
                 )
             except Exception:
                 axis_scores["pre_buzz"] = raw
@@ -174,7 +216,12 @@ def main() -> None:
         if creator_info.get("director") and (creator_info["director"].get("rsi") or 0) == 0:
             creator_unverified.append(f"감독:{creator_info['director']['name']}")
         if creator_info.get("writer") and (creator_info["writer"].get("rsi") or 0) == 0:
-            creator_unverified.append(f"작가:{creator_info['writer']['name']}")
+            # 크리에이터가 존재하고 크리에이터 RSI가 > 0 이면 작가가 미검증이어도 실질적으로 검증된 제작자가 있으므로 면제
+            if creator_info.get("creator"):
+                if (creator_info["creator"].get("rsi") or 0) == 0:
+                    creator_unverified.append(f"크리에이터:{creator_info['creator']['name']}")
+            else:
+                creator_unverified.append(f"작가:{creator_info['writer']['name']}")
         n_persons = max(len(cast_info.get("individual") or []) + 2, 1)  # cast + dir + writer
         n_unverified = len(cast_unverified) + len(creator_unverified)
         confidence = round((n_persons - n_unverified) / n_persons, 2)

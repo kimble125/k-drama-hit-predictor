@@ -47,6 +47,8 @@ class Credit:
     cast_role: Optional[CastRole] = None    # 배우 역할(actor일 때만 의미; director/writer는 None)
     role_weight: float = 1.0    # RSI 가중치(lead=1.0, supporting=0.5, special=0.2, cameo=0.1)
     notes: str = ""
+    media_type: str = "tv"      # tv / movie
+    box_office_mil: Optional[float] = None  # 영화 관객수 (백만명 단위, 영화일 때만 의미)
 
 
 @dataclass

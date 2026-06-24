@@ -1,7 +1,7 @@
 {
   "name": "허남준",
   "primary_role": "actor",
-  "award_count_5y": 0,
+  "award_count_5y": 2,
   "sns_followers": null,
   "credits": [
     {
@@ -189,15 +189,15 @@
       "year": 2021,
       "role": "actor",
       "channel": "JTBC",
-      "day_slot": null,
-      "time_slot": null,
-      "avg_rating": null,
-      "first_ep_rating": null,
-      "max_rating": null,
+      "day_slot": "토일",
+      "time_slot": "22:30",
+      "avg_rating": 2.72,
+      "first_ep_rating": 2.99,
+      "max_rating": 3.9,
       "is_lead": false,
-      "cast_role": null,
-      "role_weight": 1.0,
-      "notes": "tmdb_id=108291, order=None|wiki_matched"
+      "cast_role": "supporting",
+      "role_weight": 0.5,
+      "notes": "tmdb_id=108291, order=None|wiki_matched|manually_completed"
     },
     {
       "drama_title": "미씽: 그들이 있었다",
@@ -221,13 +221,13 @@
       "channel": "Netflix",
       "day_slot": null,
       "time_slot": null,
-      "avg_rating": null,
+      "avg_rating": 30.0,
       "first_ep_rating": null,
-      "max_rating": null,
+      "max_rating": 30.0,
       "is_lead": false,
-      "cast_role": null,
-      "role_weight": 1.0,
-      "notes": "tmdb_id=96648, order=None|wiki_matched"
+      "cast_role": "supporting",
+      "role_weight": 0.5,
+      "notes": "tmdb_id=96648, order=None|wiki_matched|manually_completed"
     },
     {
       "drama_title": "고래별",

@@ -33,6 +33,21 @@
       "cast_role": null,
       "role_weight": 1.0,
       "notes": "tmdb_id=155229, job=Director|wiki_matched"
+    },
+    {
+      "drama_title": "스토브리그",
+      "year": 2019,
+      "role": "director",
+      "channel": "SBS",
+      "day_slot": "금토",
+      "time_slot": "22:00",
+      "avg_rating": 12.5,
+      "first_ep_rating": 5.5,
+      "max_rating": 19.1,
+      "is_lead": true,
+      "cast_role": null,
+      "role_weight": 1.0,
+      "notes": "co-director|manually_added"
     }
   ]
 }

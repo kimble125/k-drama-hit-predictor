@@ -1,7 +1,7 @@
 {
   "name": "임지연",
   "primary_role": "actor",
-  "award_count_5y": 0,
+  "award_count_5y": 3,
   "sns_followers": null,
   "credits": [
     {
@@ -84,15 +84,15 @@
       "year": 2023,
       "role": "actor",
       "channel": "ENA",
-      "day_slot": null,
-      "time_slot": "10:00",
-      "avg_rating": null,
-      "first_ep_rating": null,
-      "max_rating": null,
-      "is_lead": false,
-      "cast_role": null,
+      "day_slot": "월화",
+      "time_slot": "22:00",
+      "avg_rating": 2.33,
+      "first_ep_rating": 1.2,
+      "max_rating": 2.97,
+      "is_lead": true,
+      "cast_role": "lead",
       "role_weight": 1.0,
-      "notes": "tmdb_id=211748, order=None|wiki_matched"
+      "notes": "tmdb_id=211748, order=None|wiki_matched|manually_completed"
     },
     {
       "drama_title": "국민사형투표",
@@ -131,13 +131,13 @@
       "channel": "Netflix",
       "day_slot": null,
       "time_slot": null,
-      "avg_rating": null,
+      "avg_rating": 35.0,
       "first_ep_rating": null,
-      "max_rating": null,
-      "is_lead": false,
-      "cast_role": null,
+      "max_rating": 35.0,
+      "is_lead": true,
+      "cast_role": "lead",
       "role_weight": 1.0,
-      "notes": "tmdb_id=136283, order=None|wiki_matched"
+      "notes": "tmdb_id=136283, order=None|wiki_matched|manually_completed"
     },
     {
       "drama_title": "청룡시리즈어워즈",
@@ -176,13 +176,13 @@
       "channel": "TVING",
       "day_slot": null,
       "time_slot": null,
-      "avg_rating": null,
+      "avg_rating": 2.0,
       "first_ep_rating": null,
-      "max_rating": null,
-      "is_lead": false,
-      "cast_role": null,
+      "max_rating": 2.0,
+      "is_lead": true,
+      "cast_role": "lead",
       "role_weight": 1.0,
-      "notes": "tmdb_id=197826, order=None|wiki_matched"
+      "notes": "tmdb_id=197826, order=None|wiki_matched|manually_completed"
     },
     {
       "drama_title": "찐친 이상 출발, 딱 한 번 간다면",
