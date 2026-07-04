@@ -27,8 +27,9 @@
 **실측 예시 (2026년 4-6월 K-드라마 후보작 예측):**
 
 자세한 분석 결과와 개발 히스토리는 아래의 문서를 참고하세요:
-- 📊 **7개 드라마 H-Score 분석 리포트**: [docs/seven_dramas_hscore_analysis.md](docs/seven_dramas_hscore_analysis.md)
-- 📝 **알고리즘 설계 및 개발 노트**: [DEVELOPMENT.md](DEVELOPMENT.md) (RSI 역할 가중치, 영화 Fallback, 크리에이터 연동 등 한계 돌파 이력)
+- 📊 **5-6월 7개 드라마 H-Score 분석 리포트**: [docs/seven_dramas_hscore_analysis.md](docs/seven_dramas_hscore_analysis.md)
+- 📊 **7월 4개 드라마 H-Score 분석 리포트**: [docs/july_dramas_hscore_analysis.md](docs/july_dramas_hscore_analysis.md)
+- 📝 **알고리즘 설계 및 개발 일지**: [DEVELOPMENT_LOG.md](DEVELOPMENT_LOG.md) (RSI 역할 가중치, 영화 Fallback, 크리에이터 연동, 보조작가 기여 및 리드인 갭 등)
 
 블로그 기고글: [흥행 디코딩 #1 - 콘텐츠 블로그](https://forrest125.tistory.com/114) | [기술 해설 - IT 블로그](https://kimble125.tistory.com/)
 
@@ -75,6 +76,7 @@ RSI = Σ(wins_i × time_weight_i) / Σ(time_weight_i)
 - ✅ **역할 가중치 (Role Weight)**: 주연(1.0) / 조연(0.5) / 특별출연(0.2) / 카메오(0.1) 가중 적용으로 1회성 카메오작의 RSI 왜곡 방지
 - ✅ **영화 결측치 보정 (Movie-Only Fallback)**: TV 드라마 이력 없는 거장 배우 등의 경우 영화 관객수 기반 가상 RSI 환산 적용
 - ✅ **크리에이터 기획 연동**: notes 필드 파싱을 통해 스타 총괄 제작자/쇼러너(예: 김순옥)의 기획 파워 max-blend 반영
+- ✅ **보조작가 필모그래피 기여 (v7.1)**: 신인 작가의 경우 보조작가로 기여했던 메가 히트작(도깨비 등)의 RSI를 10% 혼합하여 가산 반영
 - ✅ **OTT 환산**: Netflix Top10 → 가상 시청률 (`rank × duration × region`, 상한 35)
 - ✅ **신인 fallback**: 필모그래피 비어 있으면 수상·검증 가산점 기반 0.3~0.6 부여
 
@@ -82,13 +84,23 @@ RSI = Σ(wins_i × time_weight_i) / Σ(time_weight_i)
 **원전**: 최현종 외 (2017). 한국정보기술학회논문지 15(1).
 
 같은 슬롯 직전 드라마의 **후반 25% 회차 평균 시청률**을 새 드라마의 첫방 모멘텀 지표로 사용. `core/lead_in.py`에 구현, `platform_strategy` 축의 서브필드로 통합.
+- ✅ **전작 공백 기간 감쇄 (v7.1)**: 전작 종영 후 신작 방영까지의 공백(gap_days)이 길어질수록 리드인 보너스 감쇄(90일 초과 시 90% 감쇄).
 
-### 3. 사후 업데이트 예측
+### 3. 유튜브 예고편 화제성 정규화 (v7.1)
+**원전**: 독자적 정량화 모델 설계.
+
+공식 티저 및 예고편 업로드 시점과 조회수 누적 편향을 보완하기 위해 **유튜브 화제성 지수(YBI)** 정규화 공식을 도입했습니다:
+```
+YBI = 0.5 * log10(views + 1) + 0.3 * log10(likes * 10 + 1) + 0.2 * log10(comments * 100 + 1)
+```
+- 업로드 경과일(days_elapsed)이 14일 미만인 경우, 최근 올린 예고편의 잠재 화제성을 반영하여 최대 1.2배 가산 보정을 적용합니다. `core/temporal.py`에 구현.
+
+### 4. 사후 업데이트 예측
 **원전**: 남기환·성노윤 (2018). 지능정보연구 24(4).
 
 방영 1~3회 시청률·펀덱스 추이가 들어오면 사전 예측을 Bayesian-style로 업데이트. `prediction/updater.py`에 구현.
 
-### 4. 채널×시간대 벤치마크 세분화 (독자 확장)
+### 5. 채널×시간대 벤치마크 세분화 (독자 확장)
 "지상파 5.5%" 일괄 벤치마크의 한계를 보완. tvN 월화 22:20 = 3.0%, SBS 금토 22:00 = 8.5% 등 21개 슬롯 × 3단 fallback 계층으로 정밀화. `core/benchmarks.py`.
 
 ---

@@ -416,9 +416,44 @@ def creator_score_from_rsi(
     is_repeat_collab: bool = False,
     director_movie_bonus: float = 0.0,
     writer_movie_bonus: float = 0.0,
+    assoc_writer_rsi: Optional[float] = None,
+    writer_hierarchy: Optional[list[dict]] = None,
 ) -> float:
-    """감독·작가 RSI + 영화 보너스 → 크리에이터 파워 (1-10)."""
-    base = (director_rsi + writer_rsi) / 2 * 10
+    """감독·작가 RSI + 영화 보너스 → 크리에이터 파워 (1-10).
+
+    작가진 층위(writer_hierarchy)가 주어지면 가중 평균하여 작가 RSI를 산출합니다.
+    역할 정의:
+    - 'main_single' (단독 집필): 1.0
+    - 'main_co' (공동 집필): 0.5
+    - 'collaborator' (공동 작가 - 메인 아님): 0.3
+    - 'adaptation' (각색 작가): 0.2
+    - 'assistant' (보조 작가): 0.1
+    """
+    effective_writer_rsi = writer_rsi
+    
+    if writer_hierarchy:
+        role_weights = {
+            "main_single": 1.0,
+            "main_co": 0.5,
+            "collaborator": 0.3,
+            "adaptation": 0.2,
+            "assistant": 0.1
+        }
+        weighted_rsi_sum = 0.0
+        weight_sum = 0.0
+        for w_info in writer_hierarchy:
+            role = w_info.get("role", "main_single")
+            rsi_val = w_info.get("rsi", 0.0)
+            w = role_weights.get(role, 1.0)
+            weighted_rsi_sum += rsi_val * w
+            weight_sum += w
+        if weight_sum > 0:
+            effective_writer_rsi = weighted_rsi_sum / weight_sum
+    elif assoc_writer_rsi is not None:
+        # 하위 호환성 보장: 단독 메인 90% + 보조 작가 10%
+        effective_writer_rsi = 0.90 * writer_rsi + 0.10 * assoc_writer_rsi
+
+    base = (director_rsi + effective_writer_rsi) / 2 * 10
     award_bonus = min((director_awards + writer_awards) * 0.3, 2.0)
     collab_bonus = 0.5 if is_repeat_collab else 0.0
     movie_bonus = director_movie_bonus + writer_movie_bonus

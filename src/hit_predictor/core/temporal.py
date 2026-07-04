@@ -80,3 +80,40 @@ def normalization_report(
         "adjusted_score": adjusted,
         "delta": round(adjusted - raw_score, 2),
     }
+
+
+def calculate_youtube_buzz(
+    views: int,
+    likes: int,
+    comments: int,
+    days_elapsed: float,
+) -> float:
+    """유튜브 예고편 지표(조회수, 좋아요, 댓글수)를 정규화하여 1.0~10.0점 사이의 raw 화제성 점수 산출.
+
+    공식:
+    raw_score = 0.5 * log10(views + 1) + 0.3 * log10(likes * 10 + 1) + 0.2 * log10(comments * 100 + 1)
+
+    업로드 경과일(days_elapsed) 보정 가중치:
+    - 지수 감쇄 모델(미분적 감쇄): w_time = 1.0 + 0.2 * exp(-0.15 * max(0.0, days_elapsed))
+      (업로드 극초반에는 조회수 증가율이 높으므로 가산 가중치 적용, 시간이 흐를수록 1.0으로 수렴)
+
+    최종 10점 캡 적용.
+    """
+    if views <= 0:
+        return 0.0
+
+    # 로그 기반 원본 점수 계산
+    v_term = 0.5 * math.log10(views + 1)
+    l_term = 0.3 * math.log10(likes * 10 + 1)
+    c_term = 0.2 * math.log10(comments * 100 + 1)
+    raw = v_term + l_term + c_term
+
+    # 경과일 보정 가중치 (지수 감쇄 적용)
+    w_time = 1.0
+    if days_elapsed > 0:
+        w_time = 1.0 + 0.2 * math.exp(-0.15 * max(0.0, days_elapsed))
+
+    adjusted = raw * w_time
+    # 1.0 ~ 10.0 범위로 제한
+    adjusted = min(max(adjusted, 1.0), 10.0)
+    return round(adjusted, 2)
