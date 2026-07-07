@@ -73,8 +73,8 @@ Thumbs.db
 htmlcov/
 .tox/
 
-# 출력 (작은 JSON은 공개, 대용량은 제외)
-output/*.png
-output/*.pdf
-output/*.xlsx
+# 출력 및 임시 결과물 (깃 추적에서 완전 제외)
+output/
 .claude/
+.mcp.json
+skills-lock.json

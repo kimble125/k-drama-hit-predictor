@@ -140,8 +140,15 @@ def get_lead_in_rating(
     return calculate_last_quarter_rating(history, prev)
 
 
-def lead_in_bonus(rating: Optional[float]) -> float:
+def lead_in_bonus(rating: Optional[float], gap_days: Optional[int] = None) -> float:
     """Lead-in 시청률을 platform_strategy 축 가산점(0.0~2.0)으로 변환.
+
+    전작 종영 후 신작 방영까지의 공백(gap_days)에 따라 감쇄 가중치 적용:
+    - 14일 이하 (2주): 1.0 (감쇄 없음)
+    - 30일 이하 (1달): 0.8
+    - 60일 이하 (2달): 0.5
+    - 90일 이하 (3달): 0.3
+    - 90일 초과: 0.1
 
     15%+ → +2.0 (강한 슬롯)
     10-15% → +1.5
@@ -151,12 +158,27 @@ def lead_in_bonus(rating: Optional[float]) -> float:
     """
     if rating is None:
         return 0.0
+    
     if rating >= 15:
-        return 2.0
-    if rating >= 10:
-        return 1.5
-    if rating >= 5:
-        return 1.0
-    if rating >= 3:
-        return 0.5
-    return 0.0
+        base_bonus = 2.0
+    elif rating >= 10:
+        base_bonus = 1.5
+    elif rating >= 5:
+        base_bonus = 1.0
+    elif rating >= 3:
+        base_bonus = 0.5
+    else:
+        base_bonus = 0.0
+
+    # 갭 가중치 적용
+    if gap_days is None:
+        weight = 1.0
+    elif gap_days <= 7:
+        weight = 1.0
+    elif gap_days > 90:
+        weight = 0.0
+    else:
+        # 7일(1.0)부터 90일(0.1)까지 미분적(선형) 감쇄
+        weight = 1.0 - ((gap_days - 7) / 83.0) * 0.9
+
+    return round(base_bonus * weight, 2)

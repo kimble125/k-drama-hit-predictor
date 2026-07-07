@@ -1,0 +1,60 @@
+{
+  "name": "김성철",
+  "primary_role": "actor",
+  "award_count_5y": 0,
+  "sns_followers": null,
+  "credits": [
+    {
+      "drama_title": "골드랜드",
+      "year": 2026,
+      "role": "actor",
+      "channel": "Disney+",
+      "day_slot": null,
+      "time_slot": null,
+      "avg_rating": null,
+      "first_ep_rating": null,
+      "max_rating": null,
+      "is_lead": true,
+      "notes": "manually_created|현재 방영 중"
+    },
+    {
+      "drama_title": "브람스를 좋아하세요?",
+      "year": 2020,
+      "role": "actor",
+      "channel": "SBS",
+      "day_slot": "월화",
+      "time_slot": "22:00",
+      "avg_rating": 3.5,
+      "first_ep_rating": 5.7,
+      "max_rating": 6.3,
+      "is_lead": true,
+      "notes": "manually_created|주연"
+    },
+    {
+      "drama_title": "아스달 연대기",
+      "year": 2019,
+      "role": "actor",
+      "channel": "tvN",
+      "day_slot": "토일",
+      "time_slot": "21:10",
+      "avg_rating": 6.4,
+      "first_ep_rating": 8.9,
+      "max_rating": 9.0,
+      "is_lead": false,
+      "notes": "manually_created|조연·준주연급 비중"
+    },
+    {
+      "drama_title": "슬기로운 감빵생활",
+      "year": 2017,
+      "role": "actor",
+      "channel": "tvN",
+      "day_slot": "수목",
+      "time_slot": "22:00",
+      "avg_rating": 7.5,
+      "first_ep_rating": 4.6,
+      "max_rating": 10.3,
+      "is_lead": false,
+      "notes": "manually_created|조연"
+    }
+  ]
+}
